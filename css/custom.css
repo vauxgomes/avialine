@@ -1,0 +1,155 @@
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+
+    height: 100%;
+    width: var(--sidebar-width);
+
+    background-color: var(--bg-gray);
+    border-right: 1px solid var(--line-gray);
+
+    display: grid;
+    grid-template-rows: var(--header-height) auto;
+
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo-container {
+    color: #fff;
+    padding: 2rem 2rem;
+    background-color: var(--secondary);
+}
+
+.logo-container .logo {
+    font-size: var(--fs-xl);
+    font-weight: 800;
+}
+
+.logo-container .logo b {
+    color: var(--primary);
+}
+
+.logo-container .slogan {
+    color: var(--medium-gray);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+
+    margin-top: 3px;
+}
+
+/* NAVBAR */
+
+.sidebar .navbar {
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.navbar ul li {
+    list-style: none;
+    width: 100%;
+}
+
+.navbar ul li.nav-title {
+    color: var(--medium-gray);
+
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+}
+
+.navbar ul li a {
+    color: var(--medium-gray);
+    text-decoration: none;
+
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar ul li.active a,
+.navbar ul li a:hover {
+    border-right: 2px solid var(--primary);
+}
+
+.navbar ul li a:hover i,
+.navbar ul li a:hover .link-name {
+    color: var(--primary);
+}
+
+.navbar ul li a .link-name {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+/* MAIN */
+
+main {
+    margin-left: var(--sidebar-width);
+
+    display: grid;
+    grid-template-rows: var(--header-height) auto;
+}
+
+/* HEADER */
+
+main header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--line-gray);
+}
+
+/* SELECT */
+
+select {
+    padding: 0.5rem;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+select,
+select:focus {
+    border-color: var(--green);
+    outline: 0;
+}
+
+/* BUTTONS */
+
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--green);
+}
+
+.btn-warning {
+    color: #fff;
+    background: var(--orange);
+}
+
+.btn-warning-outline {
+    color: var(--orange);
+    background-color: inherit;
+    border: 1px solid var(--orange);
+}

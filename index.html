@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/main.css"
+        />
+
+        <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+
+        <title>Freeline</title>
+    </head>
+    <body>
+        <!-- Inspiration: https://dribbble.com/shots/15433513/attachments/7202474?mode=media -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="bx bx-message-square"></i>
+                    <span class="logo-name">Avia<b>line.</b></span>
+
+                    <div class="slogan">Acelerando caminhos.</div>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div>
+                    <ul>
+                        <li class="nav-title">Menu</li>
+
+                        <li>
+                            <a href="#">
+                                <i class="bx bx-user"></i>
+                                <span class="link-name">Alunos</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="bx bx-food-menu"></i>
+                                <span class="link-name">Cardápios</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="bx bx-bar-chart-alt-2"></i>
+                                <span class="link-name">Relatórios</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="nav-title">Serviços</li>
+
+                        <li class="active">
+                            <a href="#">
+                                <i class="bx bx-qr-scan"></i>
+                                <span class="link-name">Refeição</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="border-top pt-2">
+                    <li class="nav-title">Sua conta</li>
+
+                    <li>
+                        <a href="#">
+                            <i class="bx bx-cog"></i>
+                            <span class="link-name">Configurações</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="bx bx-help-circle"></i>
+                            <span class="link-name">Ajudas e Manuais</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="bx bx-log-out"></i>
+                            <span class="link-name">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <header>
+                <small></small>
+            </header>
+
+            <div class="calendar">
+                <div class="day-of-week">
+                    <span></span>
+                    <span>Seg</span>
+                    <span>Ter</span>
+                    <span>Qua</span>
+                    <span>Qui</span>
+                    <span>Sex</span>
+                    <!-- <span>Sab</span> -->
+                </div>
+
+                <div class="date-grid">
+                    <div class="time-slot">Manhã</div>
+                    <div class="time-slot">Tarde</div>
+                    <div class="time-slot">Noite</div>
+
+                    <div class="schedule past">
+                        <div class="description">Sweetbreads</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule past"></div>
+
+                    <div class="schedule past">
+                        <div class="description">Headcheese</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule past">
+                        <div class="description">Welsh Rabbit</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule future">Alewives</div>
+
+                    <div class="schedule past">
+                        <div class="description">Boston Cream Pie</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule past"></div>
+
+                    <div class="schedule past">
+                        <div class="description">Ladyfingers</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule active">
+                        <div class="description">Scotch Woodcock</div>
+                    </div>
+
+                    <div class="schedule future">
+                        <div class="description">Cold Duck</div>
+                    </div>
+
+                    <div class="schedule past">
+                        <div class="description">Tripe</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule past"></div>
+
+                    <div class="schedule past">
+                        <div class="description">Rocky Mountain Oysters</div>
+
+                        <div class="counter">
+                            <i class="bx bx-cookie"></i>
+                            <span>600</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule future">
+                        <div class="description">Sweetbreads</div>
+                    </div>
+
+                    <div class="schedule future">
+                        <div class="description">Headcheese</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="popup-info" class="popup" draggable="true">
+            <div class="popup-container">
+                <div class="date">
+                    <span class="day-name">SEG</span>
+                    <span class="day-number">7</span>
+                </div>
+
+                <div class="content">
+                    <div class="title">Sweetbreads</div>
+                    <div class="time">Manhã</div>
+
+                    <ul class="info">
+                        <li>
+                            Sweetbread is a culinary name for the thymus (also
+                            called throat, gullet, or neck sweetbread) or
+                            pancreas
+                        </li>
+
+                        <li><i class="bx bx-cookie"></i> 600</li>
+                    </ul>
+
+                    <button class="btn-close" type="button">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-editor" class="popup popup-editor" draggable="true">
+            <div class="popup-header">Refeição</div>
+
+            <div class="popup-container">
+                <div class="date">
+                    <span class="day-name">QUI</span>
+                    <span class="day-number">10</span>
+                </div>
+
+                <div class="content">
+                    <select>
+                        <option>Sweetbreads</option>
+                        <option>Headcheese</option>
+                        <option>Welsh Rabbit</option>
+                        <option>Boston Cream Pie</option>
+                        <option>Ladyfingers</option>
+                        <option selected>Scotch Woodcock</option>
+                        <option>Cold Duck</option>
+                        <option>Tripe</option>
+                        <option>Rocky Mountain Oysters</option>
+                    </select>
+
+                    <p class="info">
+                        Sweetbread is a culinary name for the thymus (also
+                        called throat, gullet, or neck sweetbread) or pancreas
+                    </p>
+                </div>
+            </div>
+
+            <div class="popup-footer">
+                <button id="btn-close" type="button" class="btn btn-warning-outline">Cancelar</button>
+                <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/script.js"></script>
+</html>
