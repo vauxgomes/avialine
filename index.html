@@ -17,11 +17,12 @@
             rel="stylesheet"
         />
 
-        <title>Freeline</title>
+        <title>Avialine</title>
     </head>
     <body>
-        <!-- Inspiration: https://dribbble.com/shots/15433513/attachments/7202474?mode=media -->
+        <!-- Sidebar -->
         <div class="sidebar">
+            <!-- Logo -->
             <div class="logo-container">
                 <div class="logo">
                     <i class="bx bx-message-square"></i>
@@ -31,6 +32,7 @@
                 </div>
             </div>
 
+            <!-- Menus -->
             <nav class="navbar">
                 <div>
                     <ul>
@@ -97,11 +99,25 @@
             </nav>
         </div>
 
+        <!-- Main -->
         <main>
+            <!-- Header -->
             <header>
-                <small></small>
+                <div class="title">Calendário</div>
+                <div class="date-display">
+                    Abril 4 - 8, <span class="text-secondary">2022</span>
+
+                    <!-- Buttons -->
+                    <button class="prev">
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <button class="next">
+                        <i class="bx bx-chevron-right"></i>
+                    </button>
+                </div>
             </header>
 
+            <!-- Calendar -->
             <div class="calendar">
                 <div class="day-of-week">
                     <span></span>
@@ -208,6 +224,7 @@
             </div>
         </main>
 
+        <!-- Modals -->
         <div id="popup-info" class="popup" draggable="true">
             <div class="popup-container">
                 <div class="date">
@@ -262,11 +279,19 @@
                         Sweetbread is a culinary name for the thymus (also
                         called throat, gullet, or neck sweetbread) or pancreas
                     </p>
+
+                    <a href="#"> <i class="bx bx-qr"></i> Mostrar QR-Code</a>
                 </div>
             </div>
 
             <div class="popup-footer">
-                <button id="btn-close" type="button" class="btn btn-warning-outline">Cancelar</button>
+                <button
+                    id="btn-close"
+                    type="button"
+                    class="btn btn-warning-outline"
+                >
+                    Cancelar
+                </button>
                 <button type="button" class="btn btn-primary">Salvar</button>
             </div>
         </div>
@@ -274,3 +299,5 @@
 
     <script src="js/script.js"></script>
 </html>
+
+<!-- Inspiration: https://dribbble.com/shots/15433513/attachments/7202474?mode=media -->

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 @import url('./custom.css');
+@import url('./general.css');
 @import url('./calendar.css');
 
 :root {
@@ -10,19 +10,19 @@
 
     --gray: #8892a1;
     --light-gray: #f0f0f0;
-	--medium-gray: #cacaca;
-	--dark-gray: #a2a2a2;
+    --medium-gray: #cacaca;
+    --dark-gray: #a2a2a2;
     --line-gray: #eaedf3;
 
     --blue: #5d94e4;
-    --light-blue: #f5f9ff;   
+    --light-blue: #f5f9ff;
 
     --green: #3eae4d;
     --light-green: #f7fcf9;
 
     --orange: #f5aa2e;
     --light-orange: #fffbf7;
-    
+
     --bg-gray: #f7f8fa;
     --bg-light-gray: #fafafa60;
 
@@ -34,7 +34,7 @@
     --display-1: 40px;
 
     --sidebar-width: 240px;
-    --header-height: 100px;
+    --header-height: 150px;
 }
 
 * {
@@ -63,4 +63,30 @@ body {
 
 .pt-2 {
     padding-top: 2rem;
+}
+
+/* Font Sizes */
+
+.fs-xs {
+    font-size: var(--fs-xs);
+}
+
+.fs-sm {
+    font-size: var(--fs-sm);
+}
+
+.fs-md {
+    font-size: var(--fs-md);
+}
+
+.fs-lg {
+    font-size: var(--fs-lg);
+}
+
+.fs-xl {
+    font-size: var(--fs-xl);
+}
+
+.display-1 {
+    font-size: var(--display-1);
 }

@@ -13,6 +13,8 @@
     grid-template-rows: var(--header-height) auto;
 
     z-index: 100;
+
+    overflow: auto;
 }
 
 /* LOGO */
@@ -112,44 +114,38 @@ main header {
     border-bottom: 1px solid var(--line-gray);
 }
 
-/* SELECT */
-
-select {
-    padding: 0.5rem;
-    font-weight: 700;
-    background-color: transparent;
-    border-radius: 5px;
-}
-
-select,
-select:focus {
-    border-color: var(--green);
-    outline: 0;
-}
-
-/* BUTTONS */
-
-.btn {
-    cursor: pointer;
+main header .title {
+    color: var(--dark-gray);
+    font-size: var(--fs-md);
     font-weight: 600;
 
-    padding: 0.5rem;
-    border: 1px solid transparent;
-    border-radius: 5px;
+    margin-bottom: 0.5rem;
 }
 
-.btn-primary {
-    color: #fff;
-    background: var(--green);
+header .date-display {
+    font-size: var(--display-1);
+    font-weight: 600;
 }
 
-.btn-warning {
-    color: #fff;
-    background: var(--orange);
+.date-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.btn-warning-outline {
-    color: var(--orange);
+.date-display .prev,
+.date-display .next {
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+
+    color: var(--dark-gray);
+    font-size: 30px;
+    font-weight: 600;
     background-color: inherit;
-    border: 1px solid var(--orange);
+
+    outline: 0;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
 }

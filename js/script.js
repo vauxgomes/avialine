@@ -7,9 +7,12 @@ window.onload = function () {
             var x = e.pageX
             var y = e.pageY
 
+            var pageWidth = document.querySelector('body').clientWidth
+            console.log(el.clientWidth)
+
             // Avoid horizontal overflow
-            if (x + el.offsetWidth > window.screen.width - 100) {
-                x = x - el.offsetWidth - 36
+            if (pageWidth - x < 360) {
+                x -= 360 - (pageWidth - x)
             }
 
             popupInfo.style.display = 'block'
@@ -34,9 +37,11 @@ window.onload = function () {
                 var x = e.pageX
                 var y = e.pageY
 
+                var pageWidth = document.querySelector('body').clientWidth
+
                 // Avoid horizontal overflow
-                if (x + el.offsetWidth > window.screen.width - 100) {
-                    x = x - el.offsetWidth - 36
+                if (pageWidth - x < 360) {
+                    x -= 360 - (pageWidth - x)
                 }
 
                 popupEditor.style.display = 'block'
