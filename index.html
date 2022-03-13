@@ -135,7 +135,7 @@
                     <div class="time-slot">Noite</div>
 
                     <div class="schedule past">
-                        <div class="description">Sweetbreads</div>
+                        <div class="description">Feijoada</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -146,7 +146,7 @@
                     <div class="schedule past"></div>
 
                     <div class="schedule past">
-                        <div class="description">Headcheese</div>
+                        <div class="description">Picadinho de carne</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -155,7 +155,7 @@
                     </div>
 
                     <div class="schedule past">
-                        <div class="description">Welsh Rabbit</div>
+                        <div class="description">Chuchu com camarão</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -166,7 +166,7 @@
                     <div class="schedule future">Alewives</div>
 
                     <div class="schedule past">
-                        <div class="description">Boston Cream Pie</div>
+                        <div class="description">Moqueca de peixe</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -177,7 +177,7 @@
                     <div class="schedule past"></div>
 
                     <div class="schedule past">
-                        <div class="description">Ladyfingers</div>
+                        <div class="description">Macarronada</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -186,15 +186,17 @@
                     </div>
 
                     <div class="schedule active">
-                        <div class="description">Scotch Woodcock</div>
+                        <div class="description">Bacalhoada</div>
                     </div>
 
                     <div class="schedule future">
-                        <div class="description">Cold Duck</div>
+                        <div class="description">
+                            Lombo de porco assado com lentilha
+                        </div>
                     </div>
 
                     <div class="schedule past">
-                        <div class="description">Tripe</div>
+                        <div class="description">Frango com quiabo</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -205,7 +207,7 @@
                     <div class="schedule past"></div>
 
                     <div class="schedule past">
-                        <div class="description">Rocky Mountain Oysters</div>
+                        <div class="description">Bobó de camarão</div>
 
                         <div class="counter">
                             <i class="bx bx-cookie"></i>
@@ -214,11 +216,13 @@
                     </div>
 
                     <div class="schedule future">
-                        <div class="description">Sweetbreads</div>
+                        <div class="description">
+                            Escondidinho de carne seca com mandioca
+                        </div>
                     </div>
 
                     <div class="schedule future">
-                        <div class="description">Headcheese</div>
+                        <div class="description">Carne seca com abóbora</div>
                     </div>
                 </div>
             </div>
@@ -233,7 +237,7 @@
                 </div>
 
                 <div class="content">
-                    <div class="title">Sweetbreads</div>
+                    <div class="title">Feijoada</div>
                     <div class="time">Manhã</div>
 
                     <ul class="info">
@@ -264,15 +268,17 @@
 
                 <div class="content">
                     <select>
-                        <option>Sweetbreads</option>
-                        <option>Headcheese</option>
-                        <option>Welsh Rabbit</option>
-                        <option>Boston Cream Pie</option>
-                        <option>Ladyfingers</option>
-                        <option selected>Scotch Woodcock</option>
-                        <option>Cold Duck</option>
-                        <option>Tripe</option>
-                        <option>Rocky Mountain Oysters</option>
+                        <option>Feijoada</option>
+                        <option>Picadinho de carne</option>
+                        <option>Chuchu com camarão</option>
+                        <option>Moqueca de peixe</option>
+                        <option>Macarronada</option>
+                        <option selected>Bacalhoada</option>
+                        <option>Lombo de porco assado com lentilha</option>
+                        <option>Frango com quiabo</option>
+                        <option>Bobó de camarão</option>
+                        <option>Escondidinho de carne seca com mandioca</option>
+                        <option>Carne seca com abóbora</option>
                     </select>
 
                     <p class="info">
@@ -280,7 +286,9 @@
                         called throat, gullet, or neck sweetbread) or pancreas
                     </p>
 
-                    <a href="#"> <i class="bx bx-qr"></i> Mostrar QR-Code</a>
+                    <a href="#" id="activate-qr">
+                        <i class="bx bx-qr"></i> Mostrar QR-Code
+                    </a>
                 </div>
             </div>
 
@@ -293,6 +301,12 @@
                     Cancelar
                 </button>
                 <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+
+        <div id="qr-container" class="qr-container">
+            <div class="qr">
+                <i class="bx bx-qr"></i>
             </div>
         </div>
     </body>

@@ -89,7 +89,9 @@
 }
 
 .navbar ul li a:hover i,
-.navbar ul li a:hover .link-name {
+.navbar ul li a:hover .link-name,
+.navbar ul li.active a,
+.navbar ul li.active a .link-name {
     color: var(--primary);
 }
 

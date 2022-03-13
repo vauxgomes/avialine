@@ -53,4 +53,14 @@ window.onload = function () {
     document.querySelector('#btn-close').addEventListener('click', (e) => {
         popupEditor.style.display = 'none'
     })
+
+    // QR-Code
+    document.querySelector('#activate-qr').addEventListener('click', (e) => {
+        document.querySelector('#qr-container').classList.add('active')
+        popupEditor.style.display = 'none'
+    })
+
+    document.querySelector('#qr-container').addEventListener('click', (e) => {
+        document.querySelector('#qr-container').classList.remove('active')
+    })
 }
