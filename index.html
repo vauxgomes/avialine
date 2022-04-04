@@ -1,317 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="css/main.css"
-        />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
-        <link
-            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-            rel="stylesheet"
-        />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <title>Avialine</title>
-    </head>
-    <body>
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Logo -->
-            <div class="logo-container">
-                <div class="logo">
-                    <i class="bx bx-message-square"></i>
-                    <span class="logo-name">Avia<b>line.</b></span>
-
-                    <div class="slogan">Acelerando caminhos.</div>
-                </div>
-            </div>
-
-            <!-- Menus -->
-            <nav class="navbar">
-                <div>
-                    <ul>
-                        <li class="nav-title">Menu</li>
-
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-user"></i>
-                                <span class="link-name">Alunos</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-food-menu"></i>
-                                <span class="link-name">Cardápios</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-bar-chart-alt-2"></i>
-                                <span class="link-name">Relatórios</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li class="nav-title">Serviços</li>
-
-                        <li class="active">
-                            <a href="#">
-                                <i class="bx bx-qr-scan"></i>
-                                <span class="link-name">Refeição</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <ul class="border-top pt-2">
-                    <li class="nav-title">Sua conta</li>
-
-                    <li>
-                        <a href="#">
-                            <i class="bx bx-cog"></i>
-                            <span class="link-name">Configurações</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <i class="bx bx-help-circle"></i>
-                            <span class="link-name">Ajudas e Manuais</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <i class="bx bx-log-out"></i>
-                            <span class="link-name">Sair</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+    <title>Avialine</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar active">
+      <header>
+        <div class="logo">
+          <i class="bx bxs-component"></i>
+          Avialine
         </div>
 
-        <!-- Main -->
-        <main>
-            <!-- Header -->
-            <header>
-                <div class="title">Calendário</div>
-                <div class="date-display">
-                    Abril 4 - 8, <span class="text-secondary">2022</span>
+        <a href="#" class="toggler">
+          <i class="bx bx-menu"></i>
+        </a>
+      </header>
 
-                    <!-- Buttons -->
-                    <button class="prev">
-                        <i class="bx bx-chevron-left"></i>
-                    </button>
-                    <button class="next">
-                        <i class="bx bx-chevron-right"></i>
-                    </button>
-                </div>
-            </header>
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="bx bx-home-alt"></i>
+              Home
+            </a>
+          </li>
 
-            <!-- Calendar -->
-            <div class="calendar">
-                <div class="day-of-week">
-                    <span></span>
-                    <span>Seg</span>
-                    <span>Ter</span>
-                    <span>Qua</span>
-                    <span>Qui</span>
-                    <span>Sex</span>
-                    <!-- <span>Sab</span> -->
-                </div>
+          <li>
+            <a href="#">
+              <i class="bx bx-bar-chart-alt-2"></i>
+              Relatórios
+            </a>
+          </li>
 
-                <div class="date-grid">
-                    <div class="time-slot">Manhã</div>
-                    <div class="time-slot">Tarde</div>
-                    <div class="time-slot">Noite</div>
+          <li>
+            <a href="#">
+              <i class="bx bx-food-menu"></i>
+              Cardápios
+            </a>
+          </li>
 
-                    <div class="schedule past">
-                        <div class="description">Feijoada</div>
+          <li>
+            <a href="#">
+              <i class="bx bx-calendar"></i>
+              Agenda
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule past"></div>
-
-                    <div class="schedule past">
-                        <div class="description">Picadinho de carne</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule past">
-                        <div class="description">Chuchu com camarão</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule future">Alewives</div>
-
-                    <div class="schedule past">
-                        <div class="description">Moqueca de peixe</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule past"></div>
-
-                    <div class="schedule past">
-                        <div class="description">Macarronada</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule active">
-                        <div class="description">Bacalhoada</div>
-                    </div>
-
-                    <div class="schedule future">
-                        <div class="description">
-                            Lombo de porco assado com lentilha
-                        </div>
-                    </div>
-
-                    <div class="schedule past">
-                        <div class="description">Frango com quiabo</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule past"></div>
-
-                    <div class="schedule past">
-                        <div class="description">Bobó de camarão</div>
-
-                        <div class="counter">
-                            <i class="bx bx-cookie"></i>
-                            <span>600</span>
-                        </div>
-                    </div>
-
-                    <div class="schedule future">
-                        <div class="description">
-                            Escondidinho de carne seca com mandioca
-                        </div>
-                    </div>
-
-                    <div class="schedule future">
-                        <div class="description">Carne seca com abóbora</div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Modals -->
-        <div id="popup-info" class="popup" draggable="true">
-            <div class="popup-container">
-                <div class="date">
-                    <span class="day-name">SEG</span>
-                    <span class="day-number">7</span>
-                </div>
-
-                <div class="content">
-                    <div class="title">Feijoada</div>
-                    <div class="time">Manhã</div>
-
-                    <ul class="info">
-                        <li>
-                            Sweetbread is a culinary name for the thymus (also
-                            called throat, gullet, or neck sweetbread) or
-                            pancreas
-                        </li>
-
-                        <li><i class="bx bx-cookie"></i> 600</li>
-                    </ul>
-
-                    <button class="btn-close" type="button">
-                        <i class="bx bx-x"></i>
-                    </button>
-                </div>
-            </div>
+    <main>
+      <div id="calendar">
+        <div class="day-of-week">
+          <span>SEG</span>
+          <span>TER</span>
+          <span>QUA</span>
+          <span>QUI</span>
+          <span>SEX</span>
         </div>
 
-        <div id="popup-editor" class="popup popup-editor" draggable="true">
-            <div class="popup-header">Refeição</div>
-
-            <div class="popup-container">
-                <div class="date">
-                    <span class="day-name">QUI</span>
-                    <span class="day-number">10</span>
-                </div>
-
-                <div class="content">
-                    <select>
-                        <option>Feijoada</option>
-                        <option>Picadinho de carne</option>
-                        <option>Chuchu com camarão</option>
-                        <option>Moqueca de peixe</option>
-                        <option>Macarronada</option>
-                        <option selected>Bacalhoada</option>
-                        <option>Lombo de porco assado com lentilha</option>
-                        <option>Frango com quiabo</option>
-                        <option>Bobó de camarão</option>
-                        <option>Escondidinho de carne seca com mandioca</option>
-                        <option>Carne seca com abóbora</option>
-                    </select>
-
-                    <p class="info">
-                        Sweetbread is a culinary name for the thymus (also
-                        called throat, gullet, or neck sweetbread) or pancreas
-                    </p>
-
-                    <a href="#" id="activate-qr">
-                        <i class="bx bx-qr"></i> Mostrar QR-Code
-                    </a>
-                </div>
+        <div class="schedules">
+            <div class="col-3 schedule">
+                <i class='bx bx-plus-circle'></i>
             </div>
-
-            <div class="popup-footer">
-                <button
-                    id="btn-close"
-                    type="button"
-                    class="btn btn-warning-outline"
-                >
-                    Cancelar
-                </button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+            <div class="col-3 schedule">
+                <i class='bx bx-plus-circle'></i>
+            </div>
+            <div class="col-3 schedule">
+                <i class='bx bx-plus-circle'></i>
             </div>
         </div>
+      </div>
+    </main>
+  </body>
 
-        <div id="qr-container" class="qr-container">
-            <div class="qr">
-                <i class="bx bx-qr"></i>
-            </div>
-        </div>
-    </body>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </html>
 
 <!-- Inspiration: https://dribbble.com/shots/15433513/attachments/7202474?mode=media -->
