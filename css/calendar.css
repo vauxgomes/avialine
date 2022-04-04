@@ -1,0 +1,118 @@
+#calendar {
+  position: relative;
+
+  padding: 0 1.5rem 1rem 1.5rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  scroll-behavior: smooth;
+}
+
+#calendar h1 {
+  background-color: #fff;
+  padding: 1rem 0 2rem 0;
+  position: sticky;
+  top: 0;
+}
+
+#calendar .names,
+#calendar .numbers,
+#calendar .schedules {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+#calendar .names,
+#calendar .numbers {
+  font-weight: 500;
+  list-style: none;
+}
+
+#calendar .names {
+  position: sticky;
+  top: 70px;
+
+  background-color: #fff;
+  font-size: var(--fs-sm);
+  padding-bottom: 1rem;
+}
+
+#calendar .names li {
+  padding-left: 0.25rem;
+  color: var(--gray);
+}
+
+#calendar .numbers li {
+  padding: 1rem 0 1rem 0.25rem;
+  border-top: 4px solid var(--line-gray);
+}
+
+#calendar .week {
+  margin-bottom: 1rem;
+}
+
+/* SCHEDULES */
+
+#calendar .schedules {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.schedule {
+  border-radius: 8px;
+  border: 1px solid var(--line-gray);
+  padding: 1rem;
+}
+
+.day-1 {
+  grid-column-start: 1;
+}
+
+.day-2 {
+  grid-column-start: 2;
+}
+
+.day-3 {
+  grid-column-start: 3;
+}
+
+.day-4 {
+  grid-column-start: 4;
+}
+
+.day-5 {
+  grid-column-start: 5;
+}
+
+.time-1 {
+  grid-row-start: 1;
+}
+
+.time-2 {
+  grid-row-start: 2;
+}
+
+.time-3 {
+  grid-row-start: 3;
+}
+
+.day {
+  cursor: pointer;
+  border: 1px solid var(--line-gray);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.day i {
+  color: var(--medium-gray);
+}
+
+.day:hover {
+    border-color: var(--green);
+}
+
+.day-off {
+  color: var(--line-gray);
+}

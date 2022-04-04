@@ -56,6 +56,12 @@
   font-size: var(--fs-xl);
 }
 
+.sidebar nav li.active a,
 .sidebar nav li.active a i {
   color: var(--green);
+}
+
+.sidebar .divider {
+  margin: 1rem 0;
+  border: 1px solid var(--line-gray);
 }

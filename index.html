@@ -32,8 +32,8 @@
         <ul>
           <li class="active">
             <a href="#">
-              <i class="bx bx-home-alt"></i>
-              Home
+              <i class="bx bx-calendar"></i>
+              Agenda
             </a>
           </li>
 
@@ -51,10 +51,18 @@
             </a>
           </li>
 
+          <li class="divider"></li>
+
           <li>
             <a href="#">
-              <i class="bx bx-calendar"></i>
-              Agenda
+              <i class="bx bx-user"></i>
+              Usuários
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-cog"></i>
+              Configurações
             </a>
           </li>
         </ul>
@@ -63,24 +71,309 @@
 
     <main>
       <div id="calendar">
-        <div class="day-of-week">
-          <span>SEG</span>
-          <span>TER</span>
-          <span>QUA</span>
-          <span>QUI</span>
-          <span>SEX</span>
+        <h1>Calendário Abril</h1>
+
+        <ul class="names">
+          <li>SEG</li>
+          <li>TER</li>
+          <li>QUA</li>
+          <li>QUI</li>
+          <li>SEX</li>
+        </ul>
+
+        <!-- Week 1 -->
+        <div id="week-1" class="week">
+          <ul class="numbers">
+            <li class="day-1 day-off">28</li>
+            <li class="day-2 day-off">29</li>
+            <li class="day-3 day-off">30</li>
+            <li class="day-4 day-off">31</li>
+            <li class="day-5">1</li>
+          </ul>
+
+          <div class="schedules">
+            <div class="day day-5 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+          </div>
         </div>
 
-        <div class="schedules">
-            <div class="col-3 schedule">
-                <i class='bx bx-plus-circle'></i>
+        <!-- Week 2 -->
+        <div id="week-2" class="week">
+          <ul class="numbers">
+            <li id="today">4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+
+          <div class="schedules">
+            <!-- Day 1 -->
+            <div class="day day-1 time-1">
+              <div><i class="bx bx-plus-circle"></i></div>
             </div>
-            <div class="col-3 schedule">
-                <i class='bx bx-plus-circle'></i>
+            <div class="day day-1 time-2">
+              <i class="bx bx-plus-circle"></i>
             </div>
-            <div class="col-3 schedule">
-                <i class='bx bx-plus-circle'></i>
+            <div class="day day-1 time-3">
+              <i class="bx bx-plus-circle"></i>
             </div>
+
+            <!-- Day 2 -->
+            <div class="day day-2 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day day-3 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day day-4 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day day-5 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 3 -->
+        <div id="week-3" class="week">
+          <ul class="numbers">
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+          </ul>
+
+          <div class="schedules">
+            <!-- Day 1 -->
+            <div class="day day-1 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day day-2 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day day-3 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day day-4 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day day-5 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 4 -->
+        <div id="week-4" class="week">
+          <ul class="numbers">
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+          </ul>
+
+          <div class="schedules">
+            <!-- Day 1 -->
+            <div class="day day-1 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day day-2 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day day-3 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day day-4 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day day-5 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 5 -->
+        <div id="week-5" class="week">
+          <ul class="numbers">
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+          </ul>
+
+          <div class="schedules">
+            <!-- Day 1 -->
+            <div class="day day-1 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-1 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day day-2 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-2 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day day-3 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-3 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day day-4 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-4 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day day-5 time-1">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-2">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+            <div class="day day-5 time-3">
+              <i class="bx bx-plus-circle"></i>
+            </div>
+          </div>
         </div>
       </div>
     </main>
