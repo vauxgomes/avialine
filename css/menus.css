@@ -1,0 +1,77 @@
+#menus form {
+  margin-bottom: 2rem;
+}
+
+#menus .search-bar {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--light-gray);
+
+  border-radius: 8px;
+}
+
+#menus .search-bar i {
+  padding: 0.5rem;
+
+  color: var(--green);
+  font-size: var(--fs-xl);
+}
+
+#menus .search-bar .search-group {
+  border-radius: 4px;
+  border: 1px solid var(--line-gray);
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+}
+
+#menus .search-bar input {
+  font-size: var(--fs-md);
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  outline: none;
+  border: none;
+}
+
+#menus .search-bar button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#menus table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+
+}
+
+#menus tr:hover td {
+    cursor: pointer;
+    background-color: var(--light-gray);
+}
+
+#menus table tr th,
+#menus table tr td {
+  padding: 1rem;
+}
+
+#menus table th {
+  color: var(--gray);
+  font-weight: 400;
+
+  border-bottom: 1px solid var(--line-gray);
+}
+
+#menus table tr td:nth-child(1),
+#menus table tr td:nth-child(2) {
+  width: 20px;
+}
+
+#menus .fav {
+  color: #ffb321;
+}

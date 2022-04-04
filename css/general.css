@@ -1,0 +1,52 @@
+/* SELECT */
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+select,
+select:focus {
+    border-color: var(--green);
+    outline: 0;
+}
+
+/* BUTTONS */
+
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--green);
+}
+
+.btn-warning {
+    color: #fff;
+    background: var(--orange);
+}
+
+.btn-warning-outline {
+    color: var(--orange);
+    background-color: inherit;
+    border: 1px solid var(--orange);
+}
+
+/* TEXT COLORS */
+
+.text-muted {
+    color: var(--medium-gray);
+}
+
+.text-secondary {
+    color: var(--dark-gray);
+}

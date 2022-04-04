@@ -2,7 +2,7 @@ window.onload = function () {
     // PopupInfo
     var popupInfo = document.querySelector('#popup-info')
 
-    document.querySelectorAll('.schedule.past').forEach((el) => {
+    document.querySelectorAll('.day.past').forEach((el) => {
         el.addEventListener('click', (e) => {
             var x = e.pageX
             var y = e.pageY
@@ -31,7 +31,7 @@ window.onload = function () {
     var popupEditor = document.querySelector('#popup-editor')
 
     document
-        .querySelectorAll('.schedule.active, .schedule.future')
+        .querySelectorAll('.day:not(.past)')
         .forEach((el) => {
             el.addEventListener('click', (e) => {
                 var x = e.pageX

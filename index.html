@@ -31,9 +31,16 @@
       <nav>
         <ul>
           <li class="active">
-            <a href="#">
+            <a href="index.html">
               <i class="bx bx-calendar"></i>
               Agenda
+            </a>
+          </li>
+
+          <li>
+            <a href="menus.html">
+              <i class="bx bx-food-menu"></i>
+              Cardápios
             </a>
           </li>
 
@@ -44,10 +51,12 @@
             </a>
           </li>
 
+          <li class="divider"></li>
+
           <li>
             <a href="#">
-              <i class="bx bx-food-menu"></i>
-              Cardápios
+              <i class='bx bx-qr' ></i>
+              QR Code
             </a>
           </li>
 
@@ -69,317 +78,408 @@
       </nav>
     </div>
 
-    <main>
-      <div id="calendar">
-        <h1>Calendário Abril</h1>
+    <main id="calendar">
+      <h1>Calendário Abril <i class="bx bx-chevron-down"></i></h1>
 
-        <ul class="names">
-          <li>SEG</li>
-          <li>TER</li>
-          <li>QUA</li>
-          <li>QUI</li>
-          <li>SEX</li>
+      <ul class="names">
+        <li>SEG</li>
+        <li>TER</li>
+        <li>QUA</li>
+        <li>QUI</li>
+        <li>SEX</li>
+      </ul>
+
+      <!-- Week 1 -->
+      <div id="week-1" class="week">
+        <ul class="numbers">
+          <li class="day-1 day-off">28</li>
+          <li class="day-2 day-off">29</li>
+          <li class="day-3 day-off">30</li>
+          <li class="day-4 day-off">31</li>
+          <li class="day-5">1</li>
         </ul>
 
-        <!-- Week 1 -->
-        <div id="week-1" class="week">
-          <ul class="numbers">
-            <li class="day-1 day-off">28</li>
-            <li class="day-2 day-off">29</li>
-            <li class="day-3 day-off">30</li>
-            <li class="day-4 day-off">31</li>
-            <li class="day-5">1</li>
-          </ul>
-
-          <div class="schedules">
-            <div class="day day-5 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+        <div class="schedules">
+          <div class="day day-5 time-1 meal past">
+            <i class="bx bxs-bowl-rice"></i>
+            Bife de Panela
+          </div>
+          <div class="day day-5 time-2 meal past">
+            <i class="bx bxs-bowl-rice"></i>
+            Quibe de Cenoura
+          </div>
+          <div class="day day-5 time-3 meal past">
+            <i class="bx bxs-bowl-rice"></i>
+            Farofa com frutas
           </div>
         </div>
+      </div>
 
-        <!-- Week 2 -->
-        <div id="week-2" class="week">
-          <ul class="numbers">
-            <li id="today">4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-          </ul>
+      <!-- Week 2 -->
+      <div id="week-2" class="week">
+        <ul class="numbers">
+          <li id="today">4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+        </ul>
 
-          <div class="schedules">
-            <!-- Day 1 -->
-            <div class="day day-1 time-1">
-              <div><i class="bx bx-plus-circle"></i></div>
-            </div>
-            <div class="day day-1 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+        <div class="schedules">
+          <!-- Day 1 -->
+          <div class="day day-1 time-1 meal past">
+            <i class="bx bxs-bowl-rice"></i>
+            Arroz Branco
+          </div>
+          <div class="day day-1 time-2 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Feijão Carioca
+          </div>
+          <div class="day day-1 time-3 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Salada de Alface Crespa
+          </div>
 
-            <!-- Day 2 -->
-            <div class="day day-2 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 2 -->
+          <div class="day day-2 time-1 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Salpicão de Legumes
+          </div>
+          <div class="day day-2 time-2 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Laranja
+          </div>
+          <div class="day day-2 time-3 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Refresco
+          </div>
 
-            <!-- Day 3 -->
-            <div class="day day-3 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 3 -->
+          <div class="day day-3 time-1 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Frango Assado
+          </div>
+          <div class="day day-3 time-2 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Assado de Grão-de-Bico
+          </div>
+          <div class="day day-3 time-3 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Angu com Quiabo
+          </div>
 
-            <!-- Day 4 -->
-            <div class="day day-4 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 4 -->
+          <div class="day day-4 time-1 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Arroz Branco
+          </div>
+          <div class="day day-4 time-2 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Feijão Carioca
+          </div>
+          <div class="day day-4 time-3 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Salada Grega
+          </div>
 
-            <!-- Day 5 -->
-            <div class="day day-5 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 5 -->
+          <div class="day day-5 time-1 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Salada de Beterraba Cozida
+          </div>
+          <div class="day day-5 time-2 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Doce de Paçoca
+          </div>
+          <div class="day day-5 time-3 meal">
+            <i class="bx bxs-bowl-rice"></i>
+            Refresco
           </div>
         </div>
+      </div>
 
-        <!-- Week 3 -->
-        <div id="week-3" class="week">
-          <ul class="numbers">
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-          </ul>
+      <!-- Week 3 -->
+      <div id="week-3" class="week">
+        <ul class="numbers">
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+        </ul>
 
-          <div class="schedules">
-            <!-- Day 1 -->
-            <div class="day day-1 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+        <div class="schedules">
+          <!-- Day 1 -->
+          <div class="day day-1 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 2 -->
-            <div class="day day-2 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 2 -->
+          <div class="day day-2 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 3 -->
-            <div class="day day-3 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 3 -->
+          <div class="day day-3 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 4 -->
-            <div class="day day-4 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 4 -->
+          <div class="day day-4 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 5 -->
-            <div class="day day-5 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 5 -->
+          <div class="day day-5 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-3">
+            <i class="bx bx-plus-circle"></i>
           </div>
         </div>
+      </div>
 
-        <!-- Week 4 -->
-        <div id="week-4" class="week">
-          <ul class="numbers">
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-          </ul>
+      <!-- Week 4 -->
+      <div id="week-4" class="week">
+        <ul class="numbers">
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+        </ul>
 
-          <div class="schedules">
-            <!-- Day 1 -->
-            <div class="day day-1 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+        <div class="schedules">
+          <!-- Day 1 -->
+          <div class="day day-1 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 2 -->
-            <div class="day day-2 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 2 -->
+          <div class="day day-2 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 3 -->
-            <div class="day day-3 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 3 -->
+          <div class="day day-3 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 4 -->
-            <div class="day day-4 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 4 -->
+          <div class="day day-4 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 5 -->
-            <div class="day day-5 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 5 -->
+          <div class="day day-5 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-3">
+            <i class="bx bx-plus-circle"></i>
           </div>
         </div>
+      </div>
 
-        <!-- Week 5 -->
-        <div id="week-5" class="week">
-          <ul class="numbers">
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-          </ul>
+      <!-- Week 5 -->
+      <div id="week-5" class="week">
+        <ul class="numbers">
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+        </ul>
 
-          <div class="schedules">
-            <!-- Day 1 -->
-            <div class="day day-1 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-1 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+        <div class="schedules">
+          <!-- Day 1 -->
+          <div class="day day-1 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-1 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 2 -->
-            <div class="day day-2 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-2 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 2 -->
+          <div class="day day-2 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-2 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 3 -->
-            <div class="day day-3 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-3 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 3 -->
+          <div class="day day-3 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-3 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 4 -->
-            <div class="day day-4 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-4 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 4 -->
+          <div class="day day-4 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-4 time-3">
+            <i class="bx bx-plus-circle"></i>
+          </div>
 
-            <!-- Day 5 -->
-            <div class="day day-5 time-1">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-2">
-              <i class="bx bx-plus-circle"></i>
-            </div>
-            <div class="day day-5 time-3">
-              <i class="bx bx-plus-circle"></i>
-            </div>
+          <!-- Day 5 -->
+          <div class="day day-5 time-1">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-2">
+            <i class="bx bx-plus-circle"></i>
+          </div>
+          <div class="day day-5 time-3">
+            <i class="bx bx-plus-circle"></i>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- Modals -->
+    <div id="popup-info" class="popup" draggable="true">
+      <div class="popup-container">
+        <div class="date">
+          <span class="day-name">SEG</span>
+          <span class="day-number">4</span>
+        </div>
+
+        <div class="content">
+          <div class="title">Arroz Branco</div>
+          <div class="time">Manhã</div>
+
+          <ul class="info">
+            <li>
+              Sweetbread is a culinary name for the thymus (also called throat,
+              gullet, or neck sweetbread) or pancreas
+            </li>
+
+            <li><i class="bx bx-cookie"></i> 600</li>
+          </ul>
+
+          <button class="btn-close" type="button">
+            <i class="bx bx-x"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-editor" class="popup popup-editor" draggable="true">
+      <div class="popup-header">Refeição</div>
+
+      <div class="popup-container">
+        <div class="date">
+          <span class="day-name">QUI</span>
+          <span class="day-number">10</span>
+        </div>
+
+        <div class="content">
+          <select>
+            <option>Feijoada</option>
+            <option>Picadinho de carne</option>
+            <option>Chuchu com camarão</option>
+            <option>Moqueca de peixe</option>
+            <option>Macarronada</option>
+            <option selected>Bacalhoada</option>
+            <option>Lombo de porco assado com lentilha</option>
+            <option>Frango com quiabo</option>
+            <option>Bobó de camarão</option>
+            <option>Escondidinho de carne seca com mandioca</option>
+            <option>Carne seca com abóbora</option>
+          </select>
+
+          <p class="info">
+            Sweetbread is a culinary name for the thymus (also called throat,
+            gullet, or neck sweetbread) or pancreas
+          </p>
+
+          <a href="#" id="activate-qr">
+            <i class="bx bx-qr"></i> Mostrar QR-Code
+          </a>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <button id="btn-close" type="button" class="btn btn-warning-outline">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+
+    <div id="qr-container" class="qr-container">
+      <div class="qr">
+        <i class="bx bx-qr"></i>
+      </div>
+    </div>
   </body>
 
   <script src="js/script.js"></script>
 </html>
-
-<!-- Inspiration: https://dribbble.com/shots/15433513/attachments/7202474?mode=media -->
