@@ -36,6 +36,7 @@
   --fs-xxl: 32px;
 
   --sidebar-width: 240px;
+  --sidebar-width-toggled: 70px;
   --header-height: 150px;
 }
 
@@ -58,7 +59,7 @@ body {
   font-family: 'Roboto', sans-serif;
 
   display: grid;
-  grid-template-columns: var(--sidebar-width) auto;
+  grid-template-columns: min-content 1fr;
 }
 
 main {

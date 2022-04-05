@@ -16,16 +16,14 @@
   </head>
   <body>
     <!-- Sidebar -->
-    <div class="sidebar active">
-      <header>
+    <div class="sidebar">
+      <header class="toggler">
         <div class="logo">
           <i class="bx bxs-component"></i>
-          Avialine
+          <span>Avialine</span>
         </div>
 
-        <a href="#" class="toggler">
-          <i class="bx bx-menu"></i>
-        </a>
+        <i class="bx bx-menu toggler-icon"></i>
       </header>
 
       <nav>
@@ -33,30 +31,21 @@
           <li class="active">
             <a href="index.html">
               <i class="bx bx-calendar"></i>
-              Agenda
+              <span>Agenda</span>
             </a>
           </li>
 
           <li>
             <a href="menus.html">
               <i class="bx bx-food-menu"></i>
-              Cardápios
+              <span>Cardápios</span>
             </a>
           </li>
 
           <li>
             <a href="#">
               <i class="bx bx-bar-chart-alt-2"></i>
-              Relatórios
-            </a>
-          </li>
-
-          <li class="divider"></li>
-
-          <li>
-            <a href="#">
-              <i class="bx bx-qr"></i>
-              QR Code
+              <span>Relatórios</span>
             </a>
           </li>
 
@@ -65,19 +54,20 @@
           <li>
             <a href="#">
               <i class="bx bx-user"></i>
-              Usuários
+              <span>Usuários</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="bx bx-cog"></i>
-              Configurações
+              <span>Configurações</span>
             </a>
           </li>
         </ul>
       </nav>
     </div>
 
+    <!-- Main -->
     <main id="calendar">
       <h1>Calendário Abril <i class="bx bx-chevron-down"></i></h1>
 
@@ -471,83 +461,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Modals -->
-    <div id="popup-info" class="popup" draggable="true">
-      <div class="popup-container">
-        <div class="date">
-          <span class="day-name">SEG</span>
-          <span class="day-number">4</span>
-        </div>
-
-        <div class="content">
-          <div class="title">Arroz Branco</div>
-          <div class="time">Manhã</div>
-
-          <ul class="info">
-            <li>
-              Sweetbread is a culinary name for the thymus (also called throat,
-              gullet, or neck sweetbread) or pancreas
-            </li>
-
-            <li><i class="bx bx-cookie"></i> 600</li>
-          </ul>
-
-          <button class="btn-close" type="button">
-            <i class="bx bx-x"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="popup-editor" class="popup popup-editor" draggable="true">
-      <div class="popup-header">Refeição</div>
-
-      <div class="popup-container">
-        <div class="date">
-          <span class="day-name">QUI</span>
-          <span class="day-number">10</span>
-        </div>
-
-        <div class="content">
-          <select>
-            <option>Feijoada</option>
-            <option>Picadinho de carne</option>
-            <option>Chuchu com camarão</option>
-            <option>Moqueca de peixe</option>
-            <option>Macarronada</option>
-            <option selected>Bacalhoada</option>
-            <option>Lombo de porco assado com lentilha</option>
-            <option>Frango com quiabo</option>
-            <option>Bobó de camarão</option>
-            <option>Escondidinho de carne seca com mandioca</option>
-            <option>Carne seca com abóbora</option>
-          </select>
-
-          <p class="info">
-            Sweetbread is a culinary name for the thymus (also called throat,
-            gullet, or neck sweetbread) or pancreas
-          </p>
-
-          <a href="#" id="activate-qr">
-            <i class="bx bx-qr"></i> Mostrar QR-Code
-          </a>
-        </div>
-      </div>
-
-      <div class="popup-footer">
-        <button id="btn-close" type="button" class="btn btn-warning-outline">
-          Cancelar
-        </button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-      </div>
-    </div>
-
-    <div id="qr-container" class="qr-container">
-      <div class="qr">
-        <i class="bx bx-qr"></i>
-      </div>
-    </div>
   </body>
 
   <script src="js/script.js"></script>
