@@ -2,6 +2,13 @@
   position: relative;
 }
 
+/* SCROLL BAR */
+
+#menus::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 /* HEADER */
 
 #menus header {
@@ -22,12 +29,21 @@
 
 #menus .search-bar {
   position: sticky;
-  top: 80px;
+  top: 79px;
   z-index: 100;
   
   width: 100%;
   padding: 0.75rem;
-  background-color: var(--light-gray);
+  background-color: #f5f7fa;
+  opacity: 1;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #eaedf3 0,
+    #eaedf3 1px,
+    #f5f7fa 0,
+    #f5f7fa 50%
+  );
 
   /* border-radius: 8px; */
 }
@@ -69,6 +85,7 @@
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
 #menus tr:hover td {
@@ -76,20 +93,27 @@
   background-color: var(--light-gray);
 }
 
+#menus table thead {
+  position: sticky;
+  top: 147px;
+  z-index: 200;
+
+  font-weight: 600;
+  background-color: #fff;
+
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+
 #menus table tr th,
 #menus table tr td {
   padding: 1rem;
   border-bottom: 1px solid var(--line-gray);
 }
 
-#menus table th {
-  position: sticky;
-  top: 147px;
-  z-index: 100;
 
-  font-weight: 600;
-  background-color: #fff;
-  border-bottom: 1px solid var(--line-gray);
+#menus table thead tr {
+  border-bottom: 1px solid red;
 }
 
 #menus table tr td:nth-child(1) {

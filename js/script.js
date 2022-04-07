@@ -1,23 +1,47 @@
-window.onload = function () {
-  var toggled = window.localStorage.getItem('sidebar-status')
+function resolveTogglerLoading(togglerName) {
+  var toggler = window.localStorage.getItem(togglerName)
 
-  if (toggled === null) {
-    toggled = false
-    window.localStorage.setItem('sidebar-status', JSON.stringify(toggled))
+  if (toggler === null) {
+    toggler = false
+    window.localStorage.setItem(togglerName, JSON.stringify(toggler))
   } else {
-    toggled = JSON.parse(toggled)
+    toggler = JSON.parse(toggler)
   }
 
-  if (toggled == true) {
+  return toggler
+}
+
+window.onload = function () {
+  // Sidebar Toggler
+  var sidebarStatus = resolveTogglerLoading('sidebar-status')
+  if (sidebarStatus) {
     document.querySelector('.sidebar').classList.add('toggled')
   }
 
-  var sideBarToggler = document.querySelector('.sidebar .toggler')
-
-  sideBarToggler.addEventListener('click', () => {
-    toggled = document.querySelector('.sidebar').classList.toggle('toggled')
-    window.localStorage.setItem('sidebar-status', JSON.stringify(toggled))
+  document.querySelector('.sidebar .toggler').addEventListener('click', () => {
+    sidebarStatus = document
+      .querySelector('.sidebar')
+      .classList.toggle('toggled')
+    window.localStorage.setItem('sidebar-status', JSON.stringify(sidebarStatus))
   })
+
+  // Stats Toggler
+  var statsStatus = resolveTogglerLoading('stats-status')
+  if (statsStatus) {
+    document.querySelector('#meals-stats').classList.add('toggled')
+  }
+
+  document
+    .querySelector('#meals-stats-toggler')
+    .addEventListener('click', () => {
+      document.querySelector('#calendar nav button').classList.toggle('active')
+
+      statsStatus = document
+        .querySelector('#meals-stats')
+        .classList.toggle('toggled')
+
+      window.localStorage.setItem('stats-status', JSON.stringify(sidebarStatus))
+    })
 
   // // PopupInfo
   // var popupInfo = document.querySelector('#popup-info')
