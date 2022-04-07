@@ -12,15 +12,15 @@
       rel="stylesheet"
     />
 
-    <title>Avialine</title>
+    <title>Jandaya</title>
   </head>
   <body>
     <!-- Sidebar -->
     <div class="sidebar">
       <header class="toggler">
         <div class="logo">
-          <i class="bx bxs-component"></i>
-          <span>Avialine</span>
+          <i class="bx bxs-bolt-circle"></i>
+          <span>Jandaya</span>
         </div>
 
         <i class="bx bx-menu toggler-icon"></i>
@@ -69,53 +69,56 @@
 
     <!-- Main -->
     <main id="calendar">
-      <h1>Calendário Abril <i class="bx bx-chevron-down"></i></h1>
+      <header>
+        <nav>
+          <h1>Calendário Abril</h1>
+          <input type="month" value="2022-04" />
+        </nav>
 
-      <ul class="names">
-        <li>SEG</li>
-        <li>TER</li>
-        <li>QUA</li>
-        <li>QUI</li>
-        <li>SEX</li>
-      </ul>
+        <ul class="names">
+          <li>SEG</li>
+          <li>TER</li>
+          <li>QUA</li>
+          <li>QUI</li>
+          <li>SEX</li>
+        </ul>
+      </header>
 
-      <!-- Week 1 -->
-      <div id="week-1" class="week">
+      <div class="days">
+        <!-- Week 1 -->
         <ul class="numbers">
-          <li class="day-1">28</li>
-          <li class="day-2">29</li>
-          <li class="day-3">30</li>
-          <li class="day-4">31</li>
-          <li class="day-5">1</li>
+          <li class="day-off">28</li>
+          <li class="day-off">29</li>
+          <li class="day-off">30</li>
+          <li class="day-off">31</li>
+          <li>1</li>
         </ul>
 
-        <div class="meals">
-          <div class="meal day-5 time-1 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Vitamina de abacate</strong>
-              <span>Vitamina de abacate, biscoito e maçã</span>
-            </div>
+        <div class="week">
+          <div class="day day-5 time-1 past">
+            <span class="time"></span>
+            <span class="title">Vitamina de abacate</span>
+            <span class="description">
+              Vitamina de abacate, biscoito e maçã
+            </span>
           </div>
-          <div class="meal day-5 time-2 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Cuscuz com ovos</strong>
-              <span>Cuscuz com ovos temperados e suco de goiaba</span>
-            </div>
+          <div class="day day-5 time-2 past">
+            <span class="time"></span>
+            <span class="title">Cuscuz com ovos</span>
+            <span class="description">
+              Cuscuz com ovos temperados e suco de goiaba
+            </span>
           </div>
-          <div class="meal day-5 time-3 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Cuscuz com ovos</strong>
-              <span>Cuscuz com ovos temperados e suco de goiaba</span>
-            </div>
+          <div class="day day-5 time-3 past">
+            <span class="time"></span>
+            <span class="title">Cuscuz com ovos</span>
+            <span class="description">
+              Cuscuz com ovos temperados e suco de goiaba
+            </span>
           </div>
         </div>
-      </div>
 
-      <!-- Week 2 -->
-      <div id="week-2" class="week">
+        <!-- Week 2 -->
         <ul class="numbers">
           <li>4</li>
           <li id="today">5</li>
@@ -124,209 +127,196 @@
           <li>8</li>
         </ul>
 
-        <div class="meals">
+        <div class="week">
           <!-- Day 1 -->
-          <div class="meal day-1 time-1 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Cuscuz com calabresa</strong>
-              <span>Cuscuz com calabresa e laranja</span>
-            </div>
+          <div class="day day-1 time-1 past">
+            <span class="time"></span>
+            <span class="title">Cuscuz com calabresa</span>
+            <span class="description"> Cuscuz com calabresa e laranja </span>
           </div>
-          <div class="meal day-1 time-2 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Vitamina banana + maçã</strong>
-              <span>Vitamina de banana, biscoito cream cracker e maçã</span>
-            </div>
+          <div class="day day-1 time-2 past">
+            <span class="time"></span>
+            <span class="title">Vitamina banana + maçã</span>
+            <span class="description">
+              Vitamina de banana, biscoito cream cracker e maçã
+            </span>
           </div>
-          <div class="meal day-1 time-3 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Vitamina banana + maçã</strong>
-              <span>Vitamina de banana, biscoito cream cracker e maçã</span>
-            </div>
+          <div class="day day-1 time-3 past">
+            <span class="time"></span>
+            <span class="title">Vitamina banana + maçã</span>
+            <span class="description">
+              Vitamina de banana, biscoito cream cracker e maçã
+            </span>
           </div>
 
           <!-- Day 2 -->
-          <div class="meal day-2 time-1 past">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Suco goiaba e biscoito doce</strong>
-              <span>Suco de goiaba, biscoito doce e melão</span>
-            </div>
+          <div class="day day-2 time-1">
+            <span class="time"></span>
+            <span class="title">Suco goiaba e biscoito doce</span>
+            <span class="description">
+              Suco de goiaba, biscoito doce e melão
+            </span>
           </div>
-          <div class="meal day-2 time-2">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Macarronada carne moída</strong>
-              <span>
-                Macarronada com carne moída e soja, salada crua (alface e
-                tomate) e mamão
-              </span>
-            </div>
+          <div class="day day-2 time-2">
+            <span class="time"></span>
+            <span class="title">Macarronada carne moída</span>
+            <span class="description">
+              Macarronada com carne moída e soja, salada crua (alface e tomate)
+              e mamão
+            </span>
           </div>
-          <div class="meal day-2 time-3">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Macarronada carne moída</strong>
-              <span>
-                Macarronada com carne moída e soja, salada crua (alface e
-                tomate) e mamão
-              </span>
-            </div>
+          <div class="day day-2 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 3 -->
-          <div class="meal day-3 time-1">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Risoto de frango</strong>
-              <span>
-                Risoto de frango, salada crua (alface, tomate, repolho,
-                beterraba) e laranja
-              </span>
-            </div>
+          <div class="day day-3 time-1">
+            <span class="time"></span>
+            <span class="title">Risoto de frango</span>
+            <span class="description">
+              Risoto de frango, salada crua (alface, tomate, repolho, beterraba)
+              e laranja
+            </span>
           </div>
-          <div class="meal day-3 time-2">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Leite com achocolatado</strong>
-              <span>
-                Leite com achocolatado, biscoito cream cracker e banana
-              </span>
-            </div>
+          <div class="day day-3 time-2">
+            <span class="time"></span>
+            <span class="title">Leite com achocolatado</span>
+            <span class="description">
+              Leite com achocolatado, biscoito cream cracker e banana
+            </span>
           </div>
-          <div class="meal day-3 time-3">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Leite com achocolatado</strong>
-              <span>
-                Leite com achocolatado, biscoito cream cracker e banana
-              </span>
-            </div>
+          <div class="day day-3 time-3">
+            <span class="time"></span>
+            <span class="title">Leite com achocolatado</span>
+            <span class="description">
+              Leite com achocolatado, biscoito cream cracker e banana
+            </span>
           </div>
 
           <!-- Day 4 -->
-          <div class="meal day-4 time-1">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Arroz com carne e legumes</strong>
-              <span>
-                Arroz, carne cozida com legumes, batata doce e mamão
-              </span>
-            </div>
+          <div class="day day-4 time-1">
+            <span class="time"></span>
+            <span class="title">Arroz com carne e legumes</span>
+            <span class="description">
+              Arroz, carne cozida com legumes, batata doce e mamão
+            </span>
           </div>
-          <div class="meal day-4 time-2">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Vitamina banana + laranja</strong>
-              <span>Vitamina de banana, biscoito cream cracker e laranja</span>
-            </div>
+          <div class="day day-4 time-2">
+            <span class="time"></span>
+            <span class="title">Vitamina banana + laranja</span>
+            <span class="description">
+              Vitamina de banana, biscoito cream cracker e laranja
+            </span>
           </div>
-          <div class="meal day-4 time-3">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Vitamina banana + laranja</strong>
-              <span>Vitamina de banana, biscoito cream cracker e laranja</span>
-            </div>
+          <div class="day day-4 time-3">
+            <span class="time"></span>
+            <span class="title">Vitamina banana + laranja</span>
+            <span class="description">
+              Vitamina de banana, biscoito cream cracker e laranja
+            </span>
           </div>
 
           <!-- Day 5 -->
-          <div class="meal day-5 time-1">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Mingau + banana</strong>
-              <span>Mingau de farinha láctea e banana</span>
-            </div>
+          <div class="day day-5 time-1">
+            <span class="time"></span>
+            <span class="title">Mingau + banana</span>
+            <span class="description"> Mingau de farinha láctea e banana</span>
           </div>
-          <div class="meal day-5 time-2">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Sopa de feijão</strong>
-              <span>Sopa de feijão e legumes</span>
-            </div>
+          <div class="day day-5 time-2">
+            <span class="time"></span>
+            <span class="title">Sopa de feijão</span>
+            <span class="description"> Sopa de feijão e legumes</span>
           </div>
-          <div class="meal day-5 time-3">
-            <i class="bx bxs-bowl-rice"></i>
-            <div class="description">
-              <strong>Sopa de feijão</strong>
-              <span>Sopa de feijão e legumes</span>
-            </div>
+          <div class="day day-5 time-3">
+            <span class="time"></span>
+            <span class="title">Sopa de feijão</span>
+            <span class="description"> Sopa de feijão e legumes</span>
           </div>
         </div>
-      </div>
 
-      <!-- Week 3 -->
-      <div id="week-3" class="week">
+        <!-- Week 3 -->
         <ul class="numbers">
           <li>11</li>
           <li>12</li>
           <li>13</li>
-          <li>14</li>
+          <li class="day-off">14</li>
           <li>15</li>
         </ul>
 
-        <div class="meals">
+        <div class="week">
           <!-- Day 1 -->
-          <div class="meal day-1 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 2 -->
-          <div class="meal day-2 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 3 -->
-          <div class="meal day-3 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div id="week-3" class="day day-3 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 4 -->
-          <div class="meal day-4 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 5 -->
-          <div class="meal day-5 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
         </div>
-      </div>
 
-      <!-- Week 4 -->
-      <div id="week-4" class="week">
+        <!-- Week 4 -->
         <ul class="numbers">
           <li>18</li>
           <li>19</li>
@@ -335,66 +325,79 @@
           <li>22</li>
         </ul>
 
-        <div class="meals">
+        <div class="week">
           <!-- Day 1 -->
-          <div class="meal day-1 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 2 -->
-          <div class="meal day-2 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 3 -->
-          <div class="meal day-3 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div id="week-3" class="day day-3 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 4 -->
-          <div class="meal day-4 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 5 -->
-          <div class="meal day-5 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
         </div>
-      </div>
 
-      <!-- Week 5 -->
-      <div id="week-5" class="week">
+        <!-- Week 5 -->
         <ul class="numbers">
           <li>25</li>
           <li>26</li>
@@ -403,60 +406,75 @@
           <li>29</li>
         </ul>
 
-        <div class="meals">
+        <div class="week">
           <!-- Day 1 -->
-          <div class="meal day-1 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-1 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-1 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 2 -->
-          <div class="meal day-2 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-2 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-2 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 3 -->
-          <div class="meal day-3 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div id="week-3" class="day day-3 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-3 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-3 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 4 -->
-          <div class="meal day-4 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-4 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-4 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
 
           <!-- Day 5 -->
-          <div class="meal day-5 time-1">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-1 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-2">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-2 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
-          <div class="meal day-5 time-3">
-            <i class="bx bx-plus-circle"></i>
+          <div class="day day-5 time-3 empty">
+            <span class="time"></span>
+            <i class="bx bxs-plus-circle"></i>
           </div>
         </div>
       </div>

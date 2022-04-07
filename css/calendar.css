@@ -1,3 +1,77 @@
+#calendar {
+  position: relative;
+}
+
+/* HEADER */
+
+#calendar header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: #fff;
+}
+
+#calendar header h1 {
+  font-size: 2rem;
+}
+
+#calendar nav {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line-gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#calendar nav input[type='month'] {
+  color: var(--gray);
+  font-weight: 500;
+  font-family: inherit;
+
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--medium-gray);
+  outline-color: var(--green);
+}
+
+#calendar nav input[type='month']::before {
+  /* CHEVRON */
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+
+  position: relative;
+  top: 0em;
+  left: 0.25em;
+  transform: rotate(-135deg);
+
+  vertical-align: top;
+  width: 0.4em;
+
+  margin-right: 1rem;
+}
+
+/* DAYS */
+
+#calendar .days {
+  background-color: #f5f7fa;
+  opacity: 0.8;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #eaedf3 0,
+    #eaedf3 1px,
+    #f5f7fa 0,
+    #f5f7fa 50%
+  );
+
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
 #calendar .names,
 #calendar .numbers,
 #calendar .meals {
@@ -13,12 +87,10 @@
 }
 
 #calendar .names {
-  position: sticky;
-  top: 70px;
-
   background-color: #fff;
   font-size: var(--fs-sm);
-  padding-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
 #calendar .names li {
@@ -28,16 +100,87 @@
 
 #calendar .numbers li {
   padding: 1rem 0 1rem 0.25rem;
-  border-top: 4px solid var(--line-gray);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* WEEK */
+
 #calendar .week {
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem 0.5rem;
 }
+
+.day {
+  cursor: pointer;
+  border: 1px solid var(--line-gray);
+  padding: 1rem;
+  border-radius: 4px;
+
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.day i {
+  color: var(--green);
+  font-size: var(--fs-xl);
+}
+
+.past i {
+  color: var(--orange);
+}
+
+.day:hover {
+  border-color: var(--green);
+  background-color: var(--light-green);
+}
+
+.past:hover {
+  border-color: var(--orange);
+  background-color: var(--light-orange);
+}
+
+.day span.title {
+  font-weight: 600;
+}
+
+.day span.description {
+  color: var(--gray);
+  font-size: var(--fs-sm);
+}
+
+/* EMPTY DAYS & DAYS-OFF */
+
+.empty {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.empty i {
+  color: var(--medium-gray);
+}
+
+.empty .time {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day-off {
+  color: var(--gray);
+}
+
+/* INFO TAGS */
 
 #today:after {
   content: 'hoje';
@@ -48,6 +191,21 @@
   border: 2px solid var(--green);
   border-radius: 4px;
 }
+
+.time {
+  font-size: var(--fs-sm);
+  color: var(--gray);
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 4px solid var(--green);
+}
+
+.past .time {
+  border-color: var(--orange);
+}
+
+/* WEEK: POSITIONS */
 
 .day-1 {
   grid-column-start: 1;
@@ -81,53 +239,16 @@
   grid-row-start: 3;
 }
 
-/* MEAL */
-
-.meal {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  cursor: pointer;
-  border: 1px solid var(--line-gray);
-  padding: 0.75rem;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 0.75rem;
+.time-1 .time:before {
+  content: 'Manhã';
 }
 
-.meal i {
-  color: var(--green);
-  font-size: var(--fs-xl);
+.time-2 .time:before {
+  content: 'Tarde';
 }
 
-.meal:hover {
-  border-color: var(--green);
-  background-color: var(--light-green);
-}
-
-.meal.past i {
-  color: var(--orange);
-}
-
-.meal.past:hover {
-  border-color: var(--orange);
-  background-color: var(--light-orange);
-}
-
-.meal .description {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.meal .description span {
-  color: var(--gray);
-  text-overflow: ellipsis;
-  font-size: var(--fs-sm);
+.time-3 .time:before {
+  content: 'Noite';
 }
 
 /* POP-UPS */

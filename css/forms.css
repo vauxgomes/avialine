@@ -6,6 +6,11 @@
   gap: 0.5rem;
 }
 
+.form-group label {
+  color: var(--gray);
+  font-weight: 500;
+}
+
 .form-group input,
 .form-group textarea,
 .select-group {
@@ -24,6 +29,12 @@
 .form-group textarea:focus,
 .select-group:focus {
   outline: 2px solid var(--green);
+}
+
+.inline-group {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 0.5rem;
 }
 
 .form button {

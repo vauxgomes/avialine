@@ -1,13 +1,35 @@
+#menus {
+  position: relative;
+}
+
+/* HEADER */
+
+#menus header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: #fff;
+  
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line-gray);
+}
+
 #menus form {
-  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line-gray);
 }
 
 #menus .search-bar {
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem;
   background-color: var(--light-gray);
 
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 #menus .search-bar i {
@@ -47,29 +69,32 @@
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-
 }
 
 #menus tr:hover td {
-    cursor: pointer;
-    background-color: var(--light-gray);
+  cursor: pointer;
+  background-color: var(--light-gray);
 }
 
 #menus table tr th,
 #menus table tr td {
   padding: 1rem;
-}
-
-#menus table th {
-  color: var(--gray);
-  font-weight: 400;
-
   border-bottom: 1px solid var(--line-gray);
 }
 
-#menus table tr td:nth-child(1),
-#menus table tr td:nth-child(2) {
+#menus table th {
+  position: sticky;
+  top: 147px;
+  z-index: 100;
+
+  font-weight: 600;
+  background-color: #fff;
+  border-bottom: 1px solid var(--line-gray);
+}
+
+#menus table tr td:nth-child(1) {
   width: 20px;
+  text-align: center;
 }
 
 #menus .fav {
