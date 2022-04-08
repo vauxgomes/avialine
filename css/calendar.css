@@ -1,5 +1,14 @@
 #calendar {
   position: relative;
+
+  width: 100%;
+  min-width: 650px;
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: auto;
+  scroll-behavior: smooth;
+
   border-right: 1px solid var(--line-gray);
 }
 
@@ -40,7 +49,7 @@
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid var(--medium-gray);
-  outline-color: var(--green);
+  outline-color: var(--primary);
 }
 
 #calendar nav input[type='month']::before {
@@ -76,12 +85,13 @@
 
 #calendar nav button:hover,
 #calendar nav button.active {
-  border-color: var(--green);
-  background-color: var(--light-green);
+  border-color: var(--primary);
+  background-color: var(--light-primary);
 }
 
 #calendar nav button:hover i,
-#calendar nav button.active {
+#calendar nav button.active,
+#calendar nav button.active i {
   color: green;
 }
 
@@ -127,7 +137,8 @@
   background-color: #fff;
   font-size: var(--fs-sm);
   padding: 1rem 1.5rem;
-  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  border-bottom: 1px solid var(--line-gray);
 }
 
 #calendar .names li {
@@ -168,22 +179,13 @@
 }
 
 .day i {
-  color: var(--green);
+  color: var(--primary);
   font-size: var(--fs-xl);
 }
 
-.past i {
-  color: var(--orange);
-}
-
 .day:hover {
-  border-color: var(--green);
-  background-color: var(--light-green);
-}
-
-.past:hover {
-  border-color: var(--orange);
-  background-color: var(--light-orange);
+  border-color: var(--primary);
+  background-color: var(--light-primary);
 }
 
 .day span.title {
@@ -221,11 +223,11 @@
 
 #today:after {
   content: 'hoje';
-  color: var(--green);
+  color: var(--primary);
   font-size: var(--fs-sm);
   padding: 0.25rem;
   margin-left: 0.5rem;
-  border: 2px solid var(--green);
+  border: 2px solid var(--primary);
   border-radius: 4px;
 }
 
@@ -235,11 +237,20 @@
   font-weight: 500;
   padding-bottom: 0.5rem;
   margin-bottom: 0.25rem;
-  border-bottom: 4px solid var(--green);
+  border-bottom: 4px solid var(--primary);
+}
+
+.past i {
+  color: var(--secondary);
+}
+
+.past:hover {
+  border-color: var(--secondary);
+  background-color: var(--light-secondary);
 }
 
 .past .time {
-  border-color: var(--orange);
+  border-color: var(--secondary);
 }
 
 /* WEEK: POSITIONS */

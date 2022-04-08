@@ -13,34 +13,37 @@ function resolveTogglerLoading(togglerName) {
 
 window.onload = function () {
   // Sidebar Toggler
-  var sidebarStatus = resolveTogglerLoading('sidebar-status')
-  if (sidebarStatus) {
+  var isSidebarHidden = resolveTogglerLoading('hide-sidebar')
+  if (isSidebarHidden) {
     document.querySelector('.sidebar').classList.add('toggled')
   }
 
-  document.querySelector('.sidebar .toggler').addEventListener('click', () => {
-    sidebarStatus = document
+  document.querySelector('.sidebar__toggler').addEventListener('click', () => {
+    isSidebarHidden = document
       .querySelector('.sidebar')
       .classList.toggle('toggled')
-    window.localStorage.setItem('sidebar-status', JSON.stringify(sidebarStatus))
+
+    window.localStorage.setItem('hide-sidebar', JSON.stringify(isSidebarHidden))
   })
 
   // Stats Toggler
-  var statsStatus = resolveTogglerLoading('stats-status')
-  if (statsStatus) {
-    document.querySelector('#meals-stats').classList.add('toggled')
+  var isStatsHidden = resolveTogglerLoading('hide-stats')
+  if (!isStatsHidden) {
+    document.querySelector('#calendar nav button').classList.add('active')
+    document.querySelector('#meals-stats').classList.remove('toggled')
   }
 
   document
     .querySelector('#meals-stats-toggler')
     .addEventListener('click', () => {
-      document.querySelector('#calendar nav button').classList.toggle('active')
+      console.log('CLIQUEI')
 
-      statsStatus = document
+      document.querySelector('#calendar nav button').classList.toggle('active')
+      isStatsHidden = document
         .querySelector('#meals-stats')
         .classList.toggle('toggled')
 
-      window.localStorage.setItem('stats-status', JSON.stringify(sidebarStatus))
+      window.localStorage.setItem('hide-stats', JSON.stringify(isStatsHidden))
     })
 
   // // PopupInfo

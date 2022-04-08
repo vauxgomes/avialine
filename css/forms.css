@@ -28,7 +28,7 @@
 .form-group input:focus,
 .form-group textarea:focus,
 .select-group:focus {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--primary);
 }
 
 .inline-group {
@@ -49,7 +49,7 @@
 
 .form button[type='submit'] {
   color: #fff;
-  background-color: var(--green);
+  background-color: var(--primary);
 }
 
 .form button[type='cancel'] {

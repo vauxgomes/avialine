@@ -3,43 +3,37 @@
 @import url('./general.css');
 @import url('./forms.css');
 @import url('./sidebar.css');
-@import url('./calendar.css');
-@import url('./menus.css');
-@import url('./login.css');
-@import url('./404.css');
 
 :root {
   --primary: #3eae4d;
-  --secondary: #0c102b;
+  --light-primary: #f7fcf9;
+
+  --secondary: #f5aa2e;
+  --light-secondary: #fffbf7;
+
+  --tertiary: #5d94e4;
+  --light-tertiary: #f5f9ff;
 
   --gray: #8892a1;
-  --light-gray: #F5F7FA;
+  --light-gray: #f5f7fa;
   --medium-gray: #cacaca;
   --dark-gray: #424242;
   --line-gray: #eaedf3;
 
-  --blue: #5d94e4;
-  --light-blue: #f5f9ff;
-
-  --green: #3eae4d;
-  --light-green: #f7fcf9;
-
-  --orange: #f5aa2e;
-  --light-orange: #fffbf7;
-
   --bg-gray: #f7f8fa;
   --bg-light-gray: #fafafa60;
 
-  --fs-xs: 10px;
-  --fs-sm: 13px;
-  --fs-md: 16px;
-  --fs-lg: 18px;
-  --fs-xl: 24px;
-  --fs-xxl: 32px;
+  --fs-xs: 0.625rem;
+  --fs-sm: 0.812rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-xxl: 2;
+
   --fs-display-1: 5rem;
 
   --sidebar-width: 240px;
-  --sidebar-width-toggled: 70px;
+  --sidebar-width-toggled: 83px;
   --header-height: 150px;
 }
 
@@ -53,25 +47,17 @@
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  /* overflow: hidden; */
-
   font-size: var(--fs-md);
   font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  position: relative;
+  background-color: #fff;
+  
+  width: 100%;
+  min-height: 100vh;
 
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-}
-
-main {
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  overflow-y: auto;
-
-  scroll-behavior: smooth;
 }

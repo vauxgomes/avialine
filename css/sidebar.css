@@ -3,23 +3,26 @@
   border-right: 1px solid var(--line-gray);
 }
 
-.sidebar header {
-  padding: 1.75rem 1.5rem;
+.sidebar__header {
+  height: 79px;
+  width: 100%;
+  padding: 0 1.75rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  border-bottom: 1px solid var(--line-gray);
 }
 
-.sidebar .toggler {
+.sidebar__toggler {
   cursor: pointer;
-  font-size: var(--fs-xl);
-
+  
   display: flex;
   align-items: center;
 }
 
-.sidebar .logo {
+.sidebar__logo {
   font-size: var(--fs-lg);
 
   display: flex;
@@ -27,13 +30,12 @@
   gap: 0.5rem;
 }
 
-.sidebar .logo i {
+.sidebar__logo i {
   font-size: var(--fs-xl);
-  color: var(--green);
 }
 
 .sidebar nav {
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .sidebar nav li {
@@ -41,8 +43,9 @@
 }
 
 .sidebar nav li a {
-  padding: 0.75rem 0.5rem;
+  padding: 0.75rem;
   border-radius: 4px;
+  border: 1px solid transparent;
 
   display: flex;
   align-items: center;
@@ -50,21 +53,19 @@
 }
 
 .sidebar nav li a:hover {
-  background-color: var(--bg-gray);
+  border: 1px solid var(--primary);
 }
 
 .sidebar nav li a i {
   font-size: var(--fs-xl);
 }
 
-.sidebar nav li.active a span,
 .sidebar nav li.active a i,
-.sidebar nav li:hover a i,
-.sidebar nav li:hover a span {
-  color: var(--green);
+.sidebar nav li:hover a i {
+  color: var(--primary);
 }
 
-.sidebar .divider {
+.sidebar li.divider {
   margin: 1rem 0;
   border: none;
   border-bottom: 1px solid var(--line-gray);
@@ -76,8 +77,12 @@
   width: var(--sidebar-width-toggled);
 }
 
-.sidebar.toggled .logo span,
-.sidebar.toggled .toggler-icon,
+.sidebar.toggled .sidebar__logo i {
+  color: var(--primary);
+}
+
+.sidebar.toggled .sidebar__logo span,
+.sidebar.toggled .sidebar__header .toggler-icon,
 .sidebar.toggled nav a span {
   visibility: hidden;
   opacity: 50%;
