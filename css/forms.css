@@ -1,14 +1,14 @@
 /* FORMS */
 
+.form label {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.form-group label {
-  color: var(--gray);
-  font-weight: 500;
 }
 
 .form-group input,

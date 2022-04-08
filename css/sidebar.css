@@ -66,7 +66,8 @@
 
 .sidebar .divider {
   margin: 1rem 0;
-  border: 1px solid var(--line-gray);
+  border: none;
+  border-bottom: 1px solid var(--line-gray);
 }
 
 /* TOGGLED */

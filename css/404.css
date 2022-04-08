@@ -1,0 +1,32 @@
+/* 404 */
+
+#error-404 {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#error-404 .container {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#error-404 .title {
+    font-weight: 700;
+    font-size: var(--fs-display-1);
+}
+
+#error-404 .subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#error-404 p {
+    font-size: var(--fs-sm);
+    color: var(--gray);
+}

@@ -5,15 +5,17 @@
 @import url('./sidebar.css');
 @import url('./calendar.css');
 @import url('./menus.css');
+@import url('./login.css');
+@import url('./404.css');
 
 :root {
-  --primary: #00c875;
+  --primary: #3eae4d;
   --secondary: #0c102b;
 
   --gray: #8892a1;
   --light-gray: #F5F7FA;
   --medium-gray: #cacaca;
-  --dark-gray: #a2a2a2;
+  --dark-gray: #424242;
   --line-gray: #eaedf3;
 
   --blue: #5d94e4;
@@ -34,6 +36,7 @@
   --fs-lg: 18px;
   --fs-xl: 24px;
   --fs-xxl: 32px;
+  --fs-display-1: 5rem;
 
   --sidebar-width: 240px;
   --sidebar-width-toggled: 70px;
