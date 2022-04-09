@@ -1,0 +1,74 @@
+/* WEEK */
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem 0.5rem;
+
+  padding: 0 1.5rem;
+}
+
+/* DAYS & TIMES */
+
+.day-1 {
+  grid-column-start: 1;
+}
+
+.day-2 {
+  grid-column-start: 2;
+}
+
+.day-3 {
+  grid-column-start: 3;
+}
+
+.day-4 {
+  grid-column-start: 4;
+}
+
+.day-5 {
+  grid-column-start: 5;
+}
+
+.time-0 {
+  grid-row-start: 2;
+}
+
+.time-1 {
+  grid-row-start: 3;
+}
+
+.time-2 {
+  grid-row-start: 4;
+}
+
+/* DAY NUMBER */
+
+.day__number {
+  grid-row-start: 1;
+
+  padding: 1rem 0 0.75rem 0.25rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day__number.off {
+  color: var(--gray);
+}
+
+.day__number.today:after {
+  content: 'hoje';
+
+  color: #fff;
+  font-size: var(--fs-sm);
+  color: var(--primary);
+  background-color: #fff;
+
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}

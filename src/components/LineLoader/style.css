@@ -1,0 +1,27 @@
+.loader__container {
+  width: 100%;
+  height: 4px;
+}
+
+.loader__element {
+  width: 100%;
+  height: 4px;
+  background-color: var(--light-gray);
+}
+
+.loader__element:before {
+  content: '';
+
+  width: 0;
+  height: 4px;
+  background-color: var(--primary);
+
+  display: block;
+  animation: grow 3s ease-in;
+}
+
+@keyframes grow {
+  100% {
+    width: 100%;
+  }
+}

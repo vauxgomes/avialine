@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('./general.css');
-@import url('./forms.css');
-@import url('./sidebar.css');
+@import url('./assets/css/general.css');
 
 :root {
   --primary: #3eae4d;
@@ -21,7 +18,7 @@
   --line-gray: #eaedf3;
 
   --bg-gray: #f7f8fa;
-  --bg-light-gray: #fafafa60;
+  --bg-light-gray: #fafafa;
 
   --fs-xs: 0.625rem;
   --fs-sm: 0.812rem;
@@ -30,7 +27,10 @@
   --fs-xl: 1.5rem;
   --fs-xxl: 2;
 
-  --fs-display-1: 5rem;
+  --fs-display-1: 6rem;
+  --fs-display-2: 5.5rem;
+  --fs-display-3: 4.5rem;
+  --fs-display-4: 3.5rem;
 
   --sidebar-width: 240px;
   --sidebar-width-toggled: 83px;
@@ -54,7 +54,7 @@ body {
 .grid-container {
   position: relative;
   background-color: #fff;
-  
+
   width: 100%;
   min-height: 100vh;
 
