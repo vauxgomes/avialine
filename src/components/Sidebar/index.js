@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import './style.css'
 
-export default function Sidebar() {
+export default function Sidebar({ setToken }) {
   const [toggler, setToggler] = useState(
     JSON.parse(localStorage.getItem('hide-sidebar'))
   )
@@ -60,6 +60,15 @@ export default function Sidebar() {
           <li className="divider"></li>
 
           <li>
+            <NavLink to="/today">
+              <i className="bx bx-qr"></i>
+              <span>QRCode</span>
+            </NavLink>
+          </li>
+
+          <li className="divider"></li>
+
+          <li>
             <NavLink
               to="/users"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -81,13 +90,10 @@ export default function Sidebar() {
           <li className="divider"></li>
 
           <li>
-            <NavLink
-              to="/logout"
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <Link to="/" onClick={() => setToken(null)}>
               <i className="bx bx-log-out-circle"></i>
               <span>Sair</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>

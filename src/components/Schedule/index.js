@@ -89,6 +89,11 @@ export default function Schedule({ day, time, meals, handlers }) {
             </div>
 
             <ul className={`dropdown__content ${show ? 'show' : ''}`}>
+              {/* QR CODE */}
+              {/* <li onClick={() => handlers.onShowQRCode(day.schedules[time])}>
+                <i className="bx bx-qr"></i>
+              </li> */}
+
               {/* EDIT */}
               <li
                 onClick={() => {
@@ -97,11 +102,6 @@ export default function Schedule({ day, time, meals, handlers }) {
                 }}
               >
                 <i className="bx bx-edit-alt"></i>
-              </li>
-
-              {/* QR CODE */}
-              <li>
-                <i className="bx bx-qr"></i>
               </li>
 
               {/* DIVIDER */}

@@ -24,7 +24,7 @@ class API {
 
   async getMeals(visible = null) {
     const response = await this.api.get(
-      `/meals${visible !== null ? '?visible=' + visible : ''}`
+      `/meals${visible !== null ? '?v=' + visible : ''}`
     )
     return response.data
   }
@@ -45,6 +45,10 @@ class API {
   }
 
   /** SCHEDULES */
+  async getToday(time) {
+    const response = await this.api.get(`/schedules/today/${time}`)
+    return response.data
+  }
 
   async getSchedules(month, year) {
     const response = await this.api.get(`/schedules?m=${month}&y=${year}`)

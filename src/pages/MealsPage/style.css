@@ -72,6 +72,10 @@
   cursor: pointer;
 }
 
+.meal__table tr td:nth-child(2) {
+  min-width: 80px;
+}
+
 .meal__table .loader td {
   padding: 0;
 }

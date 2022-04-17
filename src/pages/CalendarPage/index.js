@@ -93,7 +93,7 @@ export default function CalendarPage() {
         calculateQuantities(weeks)
       })
       .catch((err) => {
-        alert('Erro de conexão!')
+        console.log(err)
         setWeeks([])
       })
       .finally(() => {
@@ -107,7 +107,7 @@ export default function CalendarPage() {
         .then((meals) => setMeals(meals))
         .catch(() => setMeals([]))
     }
-  }, [year, month, meals])
+  }, [year, month, meals.length])
 
   // Date Related Function
   const isSameDate = (d1, d2) =>
@@ -142,7 +142,7 @@ export default function CalendarPage() {
   }
 
   const isTodayOrPast = (date) => {
-    const today = new Date(2022, 3, 5)
+    const today = new Date() // new Date(2022, 3, 5)
 
     return {
       isToday:
@@ -302,18 +302,18 @@ export default function CalendarPage() {
 
         {/* BODY */}
         <div className="calendar__body bg-striped">
+          {/* LOADER */}
           {loading ? <LineLoader /> : ''}
 
+          {/* WEEKS */}
           {weeks.map((week, key) => (
             <CalendarWeek
               key={`week-${key}`}
               week={week}
               meals={meals}
               handlers={{
-                onChangeMeal: '',
                 onSetMeal,
-                onRemoveSchedule,
-                onShowQRCode: ''
+                onRemoveSchedule
               }}
             />
           ))}
