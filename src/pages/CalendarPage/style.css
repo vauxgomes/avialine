@@ -52,11 +52,61 @@
 }
 
 .calendar__header nav {
-  border-bottom: 1px solid var(--line-gray);
-
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.calendar__header input[type='month'] {
+  color: var(--gray);
+  font-weight: 500;
+  font-family: inherit;
+
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--medium-gray);
+  outline-color: var(--primary);
+}
+
+.calendar__header input[type='month']::before {
+  /* CHEVRON */
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+
+  position: relative;
+  top: 0em;
+  left: 0.25em;
+  transform: rotate(-135deg);
+
+  vertical-align: top;
+  width: 0.4em;
+
+  margin-right: 1rem;
+}
+
+.calendar__header button {
+  cursor: pointer;
+
+  padding: 0.5rem;
+  background-color: inherit;
+
+  border: 1px solid var(--medium-gray);
+  border-radius: 4px;
+}
+
+.calendar__header button:hover,
+.calendar__header button.active {
+  border-color: var(--primary);
+  background-color: var(--light-primary);
+}
+
+.calendar__header button:hover i,
+.calendar__header button.active,
+.calendar__header button.active i {
+  color: green;
 }
 
 /* NAMES */

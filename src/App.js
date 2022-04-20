@@ -8,27 +8,38 @@ import LoginPage from './pages/LoginPage'
 
 // Components
 import Sidebar from './components/Sidebar'
-import QRCodePage from './pages/QRCodePage'
+import TodayPage from './pages/TodayPage'
 
 const DummyComponent = () => {
-  return <h1>Dummy Component</h1>
+  return <h1 style={{ padding: '1.25rem 1.5rem ' }}>Not implemented Yet</h1>
 }
 
 const MainComponent = () => {
-  const [token, setToken] = useState('set')
+  const [token, setToken] = useState(localStorage.getItem('token'))
+
+  const handleLogin = (token) => {
+    setToken(token)
+    localStorage.setItem('token', token, 1000 * 60 * 60 * 4)
+  }
+
+  const handleLogout = () => {
+    setToken(null)
+    localStorage.removeItem('token')
+  }
 
   if (!token) {
-    return <LoginPage setToken={setToken} />
+    return <LoginPage handleLogin={handleLogin} />
   }
 
   return (
     <>
       <div className="grid-container">
-        <Sidebar setToken={setToken} />
+        <Sidebar handleLogout={handleLogout} />
 
         <Routes>
           <Route exact path="/" element={<CalendarPage />} />
           <Route exact path="/meals" element={<MealsPage />} />
+          <Route exact path="/today" element={<TodayPage />} />
           <Route path="*" element={<DummyComponent />} />
         </Routes>
       </div>
@@ -40,7 +51,6 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route exact path="/today" element={<QRCodePage />} />
         <Route path="*" element={<MainComponent />} />
       </Routes>
     </BrowserRouter>

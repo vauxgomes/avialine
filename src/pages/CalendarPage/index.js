@@ -7,6 +7,9 @@ import './style.css'
 
 //
 export default function CalendarPage() {
+  // Language
+  const lang = navigator.languages[0] || navigator.language
+
   // Loading
   const [loading, setLoading] = useState(true)
 
@@ -21,7 +24,9 @@ export default function CalendarPage() {
   const [month, setMonth] = useState(new Date().getMonth())
   const [year, setYear] = useState(new Date().getFullYear())
   const [monthName, setMonthName] = useState(
-    new Date().toLocaleString('pt-BR', { month: 'long' })
+    new Date().toLocaleString(lang, {
+      month: 'long'
+    })
   )
 
   // Togglers
@@ -199,6 +204,7 @@ export default function CalendarPage() {
           const weeks_ = [...weeks]
           weeks_[idxWeek][idxDay].schedules[idxTime] = schedule
           setWeeks(weeks_)
+          calculateQuantities(weeks_)
         })
         .catch((err) => {
           console.log(err)
@@ -234,10 +240,6 @@ export default function CalendarPage() {
     const msg = 'Você realmente quer remover?'
     if (!window.confirm(msg)) return
 
-    console.log(idxWeek, idxDay, idxTime, id)
-    console.log(weeks[idxWeek][idxDay].schedules[idxTime])
-    console.log(meals[0])
-
     setLoading(true)
     api
       .deleteSchedule(id)
@@ -245,6 +247,7 @@ export default function CalendarPage() {
         const weeks_ = [...weeks]
         weeks_[idxWeek][idxDay].schedules[idxTime] = null
         setWeeks(weeks_)
+        calculateQuantities(weeks_)
       })
       .finally(() => setLoading(false))
   }
@@ -266,7 +269,7 @@ export default function CalendarPage() {
                 const [year, month] = e.target.value.split('-').map(Number)
 
                 setMonthName(
-                  new Date(year, month - 1, 1).toLocaleString('pt-BR', {
+                  new Date(year, month - 1, 1).toLocaleString(lang, {
                     month: 'long'
                   })
                 )

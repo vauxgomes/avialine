@@ -53,10 +53,9 @@ export default function MealsPage() {
       if (response) {
         meal.id = response.id
         meal.visible = true
-        meal.created_at = '---'
+        meal.created_at = new Date().toISOString().slice(0, 10)
 
         setMeals([meal, ...meals])
-        alert('Cadastrado')
       }
     }
 
@@ -121,7 +120,6 @@ export default function MealsPage() {
 
     if (window.confirm('Você realmente quer remover?')) {
       deleteMeal()
-      alert('Removido')
     }
   }
 
@@ -264,7 +262,7 @@ export default function MealsPage() {
               </td>
               <td>{meal.title}</td>
               <td>{meal.description}</td>
-              <td>{meal.created_at}</td>
+              <td>{meal.created_at.slice(0, 10)}</td>
               <td className="clickable" onClick={() => onLoadMeal(meal)}>
                 <i className="edit__icon bx bx-edit-alt"></i>
               </td>

@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 import './style.css'
 
-export default function Sidebar({ setToken }) {
+export default function Sidebar({ handleLogout }) {
   const [toggler, setToggler] = useState(
     JSON.parse(localStorage.getItem('hide-sidebar'))
   )
@@ -90,7 +90,7 @@ export default function Sidebar({ setToken }) {
           <li className="divider"></li>
 
           <li>
-            <Link to="/" onClick={() => setToken(null)}>
+            <Link to="/" onClick={handleLogout}>
               <i className="bx bx-log-out-circle"></i>
               <span>Sair</span>
             </Link>

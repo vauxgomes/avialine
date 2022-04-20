@@ -1,19 +1,37 @@
 import React, { useState } from 'react'
+import api from '../../services/api'
+
 import './style.css'
 
-export default function LoginPage({ setToken }) {
+export default function LoginPage({ handleLogin }) {
   //
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [alert, setAlert] = useState('')
 
   //
-  const handleLogin = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault()
-    setToken('olá')
+    setAlert(null)
+
+    api
+      .login(username, password)
+      .then((response) => {
+        if (response.success) {
+          api.setToken(response.token)
+          handleLogin(response.token)
+        } else {
+          setAlert(response.message)
+        }
+      })
+      .catch((err) => {
+        setAlert(err.response.data.message)
+      })
   }
 
   return (
     <div id="login">
+      {alert ? <div className="alert alert-danger">{alert}</div> : ''}
       <div className="login__card">
         {/* Header */}
         <div className="login__header">
@@ -25,7 +43,7 @@ export default function LoginPage({ setToken }) {
           Bem vindo(a) ao Jandaya, o gerenciador de cardápios do
         </p>
 
-        <form className="form" onSubmit={handleLogin}>
+        <form className="form" onSubmit={onSubmit}>
           <div className="form-group">
             <label htmlFor="username">Login</label>
             <input
