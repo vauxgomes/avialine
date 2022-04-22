@@ -18,7 +18,10 @@ export default function CalendarDay({ day, meals, handlers }) {
       {day.schedules &&
         day.schedules.map((schedule, time) => {
           return (
-            <div className={buildClassName(time)} key={time}>
+            <div
+              className={buildClassName(time)}
+              key={`${day.date.getTime()}-${time}`}
+            >
               <Schedule
                 day={day}
                 time={time}

@@ -105,8 +105,6 @@ export default function MealsPage() {
     setCarbohydrates(meal.carbohydrates ?? 0)
     setProteins(meal.proteins ?? 0)
     setLipids(meal.lipids ?? 0)
-
-    window.scrollTo(0, 0)
   }
 
   const onRemoveMeal = (meal) => {
@@ -147,132 +145,136 @@ export default function MealsPage() {
         <h1>Refeições</h1>
       </header>
 
-      <form
-        className="form meal__form"
-        onSubmit={handleSubmit}
-        onReset={handleReset}
-      >
-        <div className="form-group">
-          <label htmlFor="title">Título</label>
-          <input
-            name="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            minLength={3}
-            required
-          />
+      <div className="meal__body">
+        <div className="meal__form">
+          <form className="form" onSubmit={handleSubmit} onReset={handleReset}>
+            <h3>Formulário</h3>
+
+            <div className="form-group">
+              <label htmlFor="title">Título</label>
+              <input
+                name="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                minLength={3}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="description">Descrição</label>
+              <textarea
+                name="description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                rows="5"
+                required
+              />
+            </div>
+
+            <div className="inline-group">
+              <div className="form-group">
+                <label htmlFor="energy">Energia (Kcal)</label>
+                <input
+                  name="energy"
+                  value={energy}
+                  onChange={(e) => setEnergy(e.target.value)}
+                  min={0}
+                  placeholder="0"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="carbohydrates">Carbohidratos (g)</label>
+                <input
+                  name="carbohydrates"
+                  value={carbohydrates}
+                  onChange={(e) => setCarbohydrates(e.target.value)}
+                  min={0}
+                  placeholder="0"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="proteins">Proteína (g)</label>
+                <input
+                  name="proteins"
+                  value={proteins}
+                  onChange={(e) => setProteins(e.target.value)}
+                  min={0}
+                  placeholder="0"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="lipids">Lipídios (g)</label>
+                <input
+                  name="lipids"
+                  value={lipids}
+                  onChange={(e) => setLipids(e.target.value)}
+                  min={0}
+                  placeholder="0"
+                />
+              </div>
+            </div>
+
+            <div className="inline-btn-group">
+              <button type="submit" className="btn btn-primary">
+                {!!id ? 'Atualizar' : 'Enviar'}
+              </button>
+              <button type="reset" className="btn">
+                Cancelar
+              </button>
+            </div>
+          </form>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="description">Descrição</label>
-          <textarea
-            name="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            rows="5"
-            required
-          />
-        </div>
-
-        <div className="inline-group">
-          <div className="form-group">
-            <label htmlFor="energy">Energia (Kcal)</label>
-            <input
-              name="energy"
-              value={energy}
-              onChange={(e) => setEnergy(e.target.value)}
-              min={0}
-              placeholder="0"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="carbohydrates">Carbohidratos (g)</label>
-            <input
-              name="carbohydrates"
-              value={carbohydrates}
-              onChange={(e) => setCarbohydrates(e.target.value)}
-              min={0}
-              placeholder="0"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="proteins">Proteína (g)</label>
-            <input
-              name="proteins"
-              value={proteins}
-              onChange={(e) => setProteins(e.target.value)}
-              min={0}
-              placeholder="0"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="lipids">Lipídios (g)</label>
-            <input
-              name="lipids"
-              value={lipids}
-              onChange={(e) => setLipids(e.target.value)}
-              min={0}
-              placeholder="0"
-            />
-          </div>
-        </div>
-
-        <div className="inline-btn-group">
-          <button type="submit" className="btn btn-primary">
-            {!!id ? 'Atualizar' : 'Enviar'}
-          </button>
-          <button type="reset" className="btn">
-            Cancelar
-          </button>
-        </div>
-      </form>
-
-      <table className="meal__table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Título</th>
-            <th>Descrição</th>
-            <th>Criação</th>
-            <th colSpan={2}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {loading ? (
-            <tr className="loader">
-              <td colSpan={1000}>
-                <LineLoader />
-              </td>
+        <table className="meal__table">
+          <thead>
+            <tr className="">
+              <th></th>
+              <th>Refeições</th>
+              <th colSpan={2}></th>
             </tr>
-          ) : (
-            ''
-          )}
+          </thead>
+          <tbody>
+            {loading ? (
+              <tr className="loader">
+                <td colSpan={1000}>
+                  <LineLoader />
+                </td>
+              </tr>
+            ) : (
+              ''
+            )}
 
-          {meals.map((meal) => (
-            <tr key={meal.id}>
-              <td onClick={() => toggleVisible(meal.id)}>
-                <i
-                  className={`fav__icon ${
-                    meal.visible ? 'active' : ''
-                  } bx bxs-star`}
-                ></i>
-              </td>
-              <td>{meal.title}</td>
-              <td>{meal.description}</td>
-              <td>{meal.created_at.slice(0, 10)}</td>
-              <td className="clickable" onClick={() => onLoadMeal(meal)}>
-                <i className="edit__icon bx bx-edit-alt"></i>
-              </td>
-              <td className="clickable" onClick={() => onRemoveMeal(meal)}>
-                <i className="bx bxs-eraser"></i>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            {meals.map((meal) => (
+              <tr key={meal.id} className={meal.id === id ? 'active' : ''}>
+                <td
+                  className="clickable"
+                  onClick={() => toggleVisible(meal.id)}
+                >
+                  {meal.visible ? (
+                    <i className="bx bx-checkbox-checked"></i>
+                  ) : (
+                    <i className="bx bx-checkbox"></i>
+                  )}
+                </td>
+                <td className="description">
+                  <strong>{meal.title}</strong>
+                  <p>{meal.description}</p>
+                </td>
+                <td className="clickable" onClick={() => onLoadMeal(meal)}>
+                  <i className="bx bx-edit-alt"></i>
+                </td>
+                <td className="clickable" onClick={() => onRemoveMeal(meal)}>
+                  <i className="bx bxs-eraser"></i>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

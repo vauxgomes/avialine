@@ -26,7 +26,7 @@ export default function QRCodePage() {
       } else if (hour >= Number(LIMIT_MORNING)) {
         time = 1
       } else {
-        time = 1
+        time = 0
       }
 
       api.getToday(date.toISOString().slice(0, 10), time).then((schedule) => {

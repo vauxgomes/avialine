@@ -2,7 +2,7 @@
 
 .week {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.25rem 0.5rem;
 
   padding: 0 1.5rem;
@@ -30,6 +30,10 @@
   grid-column-start: 5;
 }
 
+.day-6 {
+  grid-column-start: 6;
+}
+
 .time-0 {
   grid-row-start: 2;
 }
@@ -40,6 +44,10 @@
 
 .time-2 {
   grid-row-start: 4;
+}
+
+.time-3 {
+  grid-row-start: 5;
 }
 
 /* DAY NUMBER */

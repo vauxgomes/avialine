@@ -39,7 +39,7 @@ const MainComponent = () => {
         <Routes>
           <Route exact path="/" element={<CalendarPage />} />
           <Route exact path="/meals" element={<MealsPage />} />
-          <Route exact path="/today" element={<TodayPage />} />
+          <Route path="/today/:id?" element={<TodayPage />} />
           <Route path="*" element={<DummyComponent />} />
         </Routes>
       </div>

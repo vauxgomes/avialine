@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import './style.css'
 
+const NAMES = JSON.parse(process.env.REACT_APP_TIME_NAMES)
+
 const TimeTag = ({ time }) => {
-  return <span className="time">{['Manhã', 'Tarde', 'Noite'][time]}</span>
+  return <span className="time">{NAMES[time]}</span>
 }
 
 export default function Schedule({ day, time, meals, handlers }) {
+  const navigate = useNavigate()
+
   const [show, setShow] = useState(false)
   const [selecting, setSelecting] = useState(false)
   const [selectedId, setSelectedId] = useState(
@@ -17,7 +23,7 @@ export default function Schedule({ day, time, meals, handlers }) {
       return
     }
 
-    const meal = meals.find((m) => m.id === Number(e.target.value))
+    const meal = meals.find((m) => m.id === e.target.value)
     setSelectedId(meal.id)
   }
 
@@ -68,7 +74,10 @@ export default function Schedule({ day, time, meals, handlers }) {
     )
   } else if (day.schedules[time] === null) {
     return (
-      <div className="schedule empty" onClick={() => setSelecting(true)}>
+      <div
+        className="schedule empty"
+        onClick={() => (day.isPast ? '' : setSelecting(true))}
+      >
         <TimeTag time={time} />
         {day.isPast ? <></> : <i className="card__icon bx bxs-plus-circle"></i>}
       </div>
@@ -90,9 +99,9 @@ export default function Schedule({ day, time, meals, handlers }) {
 
             <ul className={`dropdown__content ${show ? 'show' : ''}`}>
               {/* QR CODE */}
-              {/* <li onClick={() => handlers.onShowQRCode(day.schedules[time])}>
+              <li onClick={() => navigate(`today/${day.schedules[time].id}`)}>
                 <i className="bx bx-qr"></i>
-              </li> */}
+              </li>
 
               {/* EDIT */}
               <li
@@ -105,10 +114,13 @@ export default function Schedule({ day, time, meals, handlers }) {
               </li>
 
               {/* DIVIDER */}
-              <li className="divider"></li>
+              {/* <li className="divider"></li> */}
 
               {/* REMOVE */}
-              <li onClick={() => handlers.onRemoveSchedule(day, time)}>
+              <li
+                className="remove"
+                onClick={() => handlers.onRemoveSchedule(day, time)}
+              >
                 <i className="bx bx-trash"></i>
               </li>
             </ul>

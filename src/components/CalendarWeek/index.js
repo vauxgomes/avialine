@@ -18,13 +18,8 @@ export default function CalendarWeek({ week, meals, handlers }) {
         )
       })}
 
-      {week.map((day, key) => (
-        <CalendarDay
-          key={`day-${key}`}
-          day={day}
-          meals={meals}
-          handlers={handlers}
-        />
+      {week.map((day) => (
+        <CalendarDay key={day.date.getTime()} day={day} meals={meals} handlers={handlers} />
       ))}
     </div>
   )

@@ -54,13 +54,12 @@ export default function CalendarPage() {
 
         // Grouping Schedules
         while (date.getMonth() === month) {
-          // Only weekdays
-          if (date.getDay() > 0 && date.getDay() < 6) {
+          if (date.getDay() > 0) {
             // Empty Day
             const day = {
               ...isTodayOrPast(date),
               date: new Date(date),
-              schedules: [null, null, null]
+              schedules: [null, null, null, null]
             }
 
             // Seaching for schedules on that day
@@ -85,7 +84,7 @@ export default function CalendarPage() {
         const weeks = []
         while (groupedSchedules.length > 0) {
           const day = groupedSchedules[0].date.getDay()
-          const week = groupedSchedules.splice(0, 6 - day)
+          const week = groupedSchedules.splice(0, 7 - day)
 
           week.forEach((day) => {
             day.week = weeks.length
@@ -301,6 +300,7 @@ export default function CalendarPage() {
           <span>QUA</span>
           <span>QUI</span>
           <span>SEX</span>
+          <span>SAB</span>
         </div>
 
         {/* BODY */}

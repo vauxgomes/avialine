@@ -6,6 +6,7 @@
 
 - [Description](#description)
 - [Running Application](#running-application)
+- [Running Docker](#running-application-on-docker)
 - [Environment Variables](#environment-variables)
 - [Citation](#citation)
 
@@ -19,15 +20,26 @@ React frontend open project for managing meals orders in Brazilian Federal Insti
 yarn start
 ```
 
+## Running application on Docker
+
+```sh
+docker build . -t <your username>/meal-front
+docker run -p 80:3000 --name meal-front -d meal-front
+```
+
 ## Environment Variables Example
 
 ```
+# APP
+PUBLIC_URL=jandaya
+
 # API
 REACT_APP_API_URL=http://localhost:3333
 
 # Configs
 REACT_APP_TIME_LIMIT_MORNING=15
 REACT_APP_TIME_LIMIT_AFTERNOON=17
+REACT_APP_TIME_LIMIT_NIGHT=21
 ```
 
 Please refer to [Backend Project](https://github.com/vauxgomes/meal-scheduler-backend) for a better understanding of this application and its Environment Variables
