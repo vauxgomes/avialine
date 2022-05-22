@@ -57,14 +57,14 @@ export default function Sidebar({ handleLogout }) {
             </NavLink>
           </li>
 
-          {/* <li className="divider"></li>
+          <li className="divider"></li>
 
           <li>
-            <NavLink to="/today">
-              <i className="bx bx-qr"></i>
-              <span>QRCode</span>
+            <NavLink to="/orders">
+              <i className="bx bx-customize"></i>
+              <span>Cad. Refeição</span>
             </NavLink>
-          </li> */}
+          </li>
 
           <li className="divider"></li>
 

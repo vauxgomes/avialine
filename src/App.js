@@ -5,10 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CalendarPage from './pages/CalendarPage'
 import MealsPage from './pages/MealsPage'
 import LoginPage from './pages/LoginPage'
+import QRCodePage from './pages/QRCodePage'
 
 // Components
 import Sidebar from './components/Sidebar'
-import TodayPage from './pages/TodayPage'
 
 const DummyComponent = () => {
   return <h1 style={{ padding: '1.25rem 1.5rem ' }}>Not implemented Yet</h1>
@@ -39,7 +39,7 @@ const MainComponent = () => {
         <Routes>
           <Route exact path="/" element={<CalendarPage />} />
           <Route exact path="/meals" element={<MealsPage />} />
-          <Route path="/today/:id?" element={<TodayPage />} />
+          <Route path="/today/:id" element={<QRCodePage />} />
           <Route path="*" element={<DummyComponent />} />
         </Routes>
       </div>

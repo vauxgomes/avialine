@@ -21,7 +21,7 @@ class API {
 
     this.config = {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: localStorage.getItem('token')
       }
     }
   }
@@ -30,7 +30,7 @@ class API {
   setToken(token) {
     this.config = {
       headers: {
-        Authorization: `Bearer ${token}`
+        Authorization: token
       }
     }
   }
@@ -69,16 +69,16 @@ class API {
 
   /** SCHEDULES */
 
-  async getToday(date, time) {
-    const response = await this.api.get(`/schedules/today/${date}/${time}`)
-    return response.data
-  }
-
   async getSchedules(month, year) {
     const response = await this.api.get(
       `/schedules?m=${month}&y=${year}`,
       this.config
     )
+    return response.data
+  }
+
+  async getSchedule(id) {
+    const response = await this.api.get(`/schedules/${id}`, this.config)
     return response.data
   }
 
