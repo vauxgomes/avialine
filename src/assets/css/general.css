@@ -3,12 +3,14 @@
 select {
   width: 100%;
   padding: 0.5rem;
+  margin-bottom: 1rem;
+
+  font-size: var(--fs-md);
   /* font-weight: 700; */
   background-color: transparent;
   border-radius: 5px;
 }
 
-select,
 select:focus {
   border-color: var(--primary);
   outline: 0;

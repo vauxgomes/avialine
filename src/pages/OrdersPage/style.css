@@ -1,0 +1,73 @@
+#orders {
+  position: relative;
+
+  width: 100%;
+  min-width: 750px;
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: auto;
+  scroll-behavior: smooth;
+
+  /* border-right: 1px solid var(--line-gray); */
+
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    'header'
+    'names';
+}
+
+/* SCROLLBAR */
+
+#orders::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* HEADER */
+
+.orders__header {
+  grid-area: header;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  height: 79px;
+  padding: 1.25rem 1.5rem;
+
+  background-color: #fff;
+  border-right: 1px solid var(--line-gray);
+  border-bottom: 1px solid var(--line-gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders__header h1 {
+  text-transform: capitalize;
+}
+
+/* BODY */
+
+#orders .orders__body {
+  grid-area: names;
+
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#orders .orders__body .form {
+  padding: 1rem 1.5rem;
+
+  background-color: white;
+  border: 1px solid var(--line-gray);
+  border-radius: 4px;
+
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+}

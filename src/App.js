@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // Pages
 import CalendarPage from './pages/CalendarPage'
 import MealsPage from './pages/MealsPage'
+import OrdersPage from './pages/OrdersPage'
+
 import LoginPage from './pages/LoginPage'
 import QRCodePage from './pages/QRCodePage'
 
@@ -17,7 +19,7 @@ const DummyComponent = () => {
 const MainComponent = () => {
   const [token, setToken] = useState(localStorage.getItem('token'))
 
-  const handleLogin = (token) => {
+  const handleLogin = token => {
     setToken(token)
     localStorage.setItem('token', token, 1000 * 60 * 60 * 4)
   }
@@ -39,6 +41,7 @@ const MainComponent = () => {
         <Routes>
           <Route exact path="/" element={<CalendarPage />} />
           <Route exact path="/meals" element={<MealsPage />} />
+          <Route path="/orders" element={<OrdersPage />} />
           <Route path="/today/:id" element={<QRCodePage />} />
           <Route path="*" element={<DummyComponent />} />
         </Routes>

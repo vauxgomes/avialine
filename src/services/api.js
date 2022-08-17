@@ -27,6 +27,7 @@ class API {
   }
 
   /* SETTERS */
+
   setToken(token) {
     this.config = {
       headers: {
@@ -98,6 +99,17 @@ class API {
 
   async deleteSchedule(id) {
     const response = await this.api.delete(`/schedules/${id}`, this.config)
+    return response.data
+  }
+
+  /* ORDERS */
+
+  async postOrderOnBehalfOf(enrollmentCode, time, date) {
+    const response = await this.api.post(
+      `/orders/onbehalfof/student/${enrollmentCode}`,
+      { time, date },
+      this.config
+    )
     return response.data
   }
 }

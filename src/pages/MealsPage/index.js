@@ -12,10 +12,10 @@ export default function MealsPage() {
   const [id, setId] = useState(null)
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [energy, setEnergy] = useState('')
-  const [carbohydrates, setCarbohydrates] = useState('')
-  const [proteins, setProteins] = useState('')
-  const [lipids, setLipids] = useState('')
+  const [energy, setEnergy] = useState(0)
+  const [carbohydrates, setCarbohydrates] = useState(0)
+  const [proteins, setProteins] = useState(0)
+  const [lipids, setLipids] = useState(0)
 
   // Data
   const [meals, setMeals] = useState([])
@@ -26,13 +26,13 @@ export default function MealsPage() {
 
     api
       .getMeals()
-      .then((response) => {
+      .then(response => {
         setMeals(response)
       })
       .finally(() => setLoading(false))
   }, [])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
 
     // Meal
@@ -64,7 +64,7 @@ export default function MealsPage() {
       const response = await api.putMeal(meal, meal.id)
 
       if (response) {
-        const index = meals.findIndex((m) => m.id === meal.id)
+        const index = meals.findIndex(m => m.id === meal.id)
         const meals_ = [...meals]
 
         meals_[index].title = title
@@ -91,28 +91,28 @@ export default function MealsPage() {
     setId(null)
     setTitle('')
     setDescription('')
-    setEnergy('')
-    setCarbohydrates('')
-    setProteins('')
-    setLipids('')
+    setEnergy(0)
+    setCarbohydrates(0)
+    setProteins(0)
+    setLipids(0)
   }
 
-  const onLoadMeal = (meal) => {
+  const onLoadMeal = meal => {
     setId(meal.id)
     setTitle(meal.title)
     setDescription(meal.description)
-    setEnergy(meal.energy ?? 0)
-    setCarbohydrates(meal.carbohydrates ?? 0)
-    setProteins(meal.proteins ?? 0)
-    setLipids(meal.lipids ?? 0)
+    setEnergy(meal.energy)
+    setCarbohydrates(meal.carbohydrates)
+    setProteins(meal.proteins)
+    setLipids(meal.lipids)
   }
 
-  const onRemoveMeal = (meal) => {
+  const onRemoveMeal = meal => {
     // Delete
     async function deleteMeal() {
       const response = await api.deleteMeal(meal.id)
       if (response) {
-        setMeals(meals.filter((m) => m.id !== meal.id))
+        setMeals(meals.filter(m => m.id !== meal.id))
       }
     }
 
@@ -121,8 +121,8 @@ export default function MealsPage() {
     }
   }
 
-  const toggleVisible = (id) => {
-    const index = meals.findIndex((m) => m.id === id)
+  const toggleVisible = id => {
+    const index = meals.findIndex(m => m.id === id)
 
     // Put
     async function putMeal(index) {
@@ -155,7 +155,7 @@ export default function MealsPage() {
               <input
                 name="title"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={e => setTitle(e.target.value)}
                 minLength={3}
                 required
               />
@@ -166,7 +166,7 @@ export default function MealsPage() {
               <textarea
                 name="description"
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={e => setDescription(e.target.value)}
                 rows="5"
                 required
               />
@@ -178,7 +178,7 @@ export default function MealsPage() {
                 <input
                   name="energy"
                   value={energy}
-                  onChange={(e) => setEnergy(e.target.value)}
+                  onChange={e => setEnergy(e.target.value)}
                   min={0}
                   placeholder="0"
                 />
@@ -189,7 +189,7 @@ export default function MealsPage() {
                 <input
                   name="carbohydrates"
                   value={carbohydrates}
-                  onChange={(e) => setCarbohydrates(e.target.value)}
+                  onChange={e => setCarbohydrates(e.target.value)}
                   min={0}
                   placeholder="0"
                 />
@@ -200,7 +200,7 @@ export default function MealsPage() {
                 <input
                   name="proteins"
                   value={proteins}
-                  onChange={(e) => setProteins(e.target.value)}
+                  onChange={e => setProteins(e.target.value)}
                   min={0}
                   placeholder="0"
                 />
@@ -211,7 +211,7 @@ export default function MealsPage() {
                 <input
                   name="lipids"
                   value={lipids}
-                  onChange={(e) => setLipids(e.target.value)}
+                  onChange={e => setLipids(e.target.value)}
                   min={0}
                   placeholder="0"
                 />
@@ -248,7 +248,7 @@ export default function MealsPage() {
               ''
             )}
 
-            {meals.map((meal) => (
+            {meals.map(meal => (
               <tr key={meal.id} className={meal.id === id ? 'active' : ''}>
                 <td
                   className="clickable"
