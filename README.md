@@ -34,12 +34,18 @@ docker run -p 80:3000 --name meal-front -d meal-front
 PUBLIC_URL=jandaya
 
 # API
+REACT_APP_API_URL=http://18.230.185.218:3333
 REACT_APP_API_URL=http://localhost:3333
 
-# Configs
-REACT_APP_TIME_LIMIT_MORNING=15
-REACT_APP_TIME_LIMIT_AFTERNOON=17
-REACT_APP_TIME_LIMIT_NIGHT=21
+# MEALS TIME LIMITS
+REACT_APP_TIME_LIMITS=[11, 13, 17, 21]
+
+# MEALS NAMES
+REACT_APP_BLOCKED_DAYS=[0]
+REACT_APP_TIME_NAMES=["Café da Manhã", "Almoço", "Lanche da Tarde", "Lanche da Noite"]
+
+# MOBILE
+REACT_APP_MOBILE_PREFIX=vxgs://
 ```
 
 Please refer to [Backend Project](https://github.com/vauxgomes/meal-scheduler-backend) for a better understanding of this application and its Environment Variables

@@ -10,13 +10,13 @@ export default function LoginPage({ handleLogin }) {
   const [alert, setAlert] = useState('')
 
   //
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault()
     setAlert(null)
 
     api
       .login(username, password)
-      .then((response) => {
+      .then(response => {
         if (response.success) {
           api.setToken(response.token)
           handleLogin(response.token)
@@ -24,8 +24,12 @@ export default function LoginPage({ handleLogin }) {
           setAlert(response.message)
         }
       })
-      .catch((err) => {
-        setAlert(err.response.data.message)
+      .catch(err => {
+        try {
+          setAlert(err.response.data.message)
+        } catch (error) {
+          console.log(err)
+        }
       })
   }
 
@@ -49,7 +53,7 @@ export default function LoginPage({ handleLogin }) {
             <input
               id="username"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={e => setUsername(e.target.value)}
               required
             />
           </div>
@@ -61,7 +65,7 @@ export default function LoginPage({ handleLogin }) {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={e => setPassword(e.target.value)}
               required
             />
           </div>
